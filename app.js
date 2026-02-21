@@ -1,5 +1,6 @@
 const STORAGE_KEY = "english-loop-state-v2";
-const SITE_UPDATED_AT = "2026-02-21 11:57:51";
+const SITE_UPDATED_AT = "2026-02-21 12:42:54";
+const LEVEL_JSON_PATH = "data/processed/level_recommendations.json";
 
 const defaultLessons = [
   { id: "l1", title: "Airport Basics", tag: "travel", cards: ["Where is gate 12?", "Can I have a window seat?"] },
@@ -110,6 +111,42 @@ function dueCards() {
     const item = state.srs[c.key];
     return !item || item.nextDue <= now;
   });
+}
+
+function toLessonFromReco(item, idx) {
+  const meaning = item.meaning_1_ko || item.meaning_1 || "";
+  const example = (item.examples_by_meaning || []).flatMap((b) => b.examples || [])[0] || "";
+  const title = `${item.lemma}${item.pos ? ` (${item.pos})` : ""}`;
+  const card = [
+    `${item.lemma} — ${meaning}`.trim(),
+    example
+  ].filter(Boolean).join("\n");
+
+  return {
+    id: `reco-${idx + 1}`,
+    title,
+    tag: "db-recommendation",
+    cards: [card || item.lemma]
+  };
+}
+
+async function loadRecommendationsIntoLessons() {
+  try {
+    const res = await fetch(LEVEL_JSON_PATH);
+    if (!res.ok) return;
+    const data = await res.json();
+    const level = state.profile?.level || "A1";
+    const levelItems = data?.levels?.[level] || data?.levels?.A1 || [];
+    if (!Array.isArray(levelItems) || levelItems.length === 0) return;
+
+    const mapped = levelItems.slice(0, 120).map(toLessonFromReco);
+    if (mapped.length > 0) {
+      state.lessons = mapped;
+      saveState();
+    }
+  } catch {
+    // fallback to default lessons silently
+  }
 }
 
 function pickLearningCard() {
@@ -358,9 +395,10 @@ function renderUpdateTimestamp() {
   el.textContent = `업데이트: ${SITE_UPDATED_AT}`;
 }
 
-function init() {
+async function init() {
   renderUpdateTimestamp();
   ensureSeedAdmin();
+  await loadRecommendationsIntoLessons();
   renderDiag();
   bindEvents();
   pickLearningCard();
