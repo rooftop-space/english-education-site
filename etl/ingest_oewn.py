@@ -29,7 +29,7 @@ import argparse
 import json
 import sqlite3
 from pathlib import Path
-from typing import Dict, Iterable, List
+from typing import Dict, Iterable, List, Optional
 
 DEFAULT_SOURCE = "OEWN"
 DEFAULT_LICENSE = "CC BY 4.0"
@@ -41,22 +41,43 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--input", required=True, help="path to json/jsonl")
     p.add_argument("--source", default=DEFAULT_SOURCE)
     p.add_argument("--license", dest="license_name", default=DEFAULT_LICENSE)
+    p.add_argument("--allow_lang", default="en", help="comma-separated allowed lang codes (default: en)")
+    p.add_argument("--max_rows", type=int, default=0, help="stop after N accepted rows (0=unlimited)")
+    p.add_argument("--min_freq", type=float, default=None, help="minimum word frequency cutoff")
     return p.parse_args()
 
 
+def normalize_lang(code: Optional[str]) -> str:
+    c = (code or "en").strip().lower()
+    if c in {"eng", "en-us", "en-gb"}:
+        return "en"
+    return c
+
+
 def load_entries(path: Path) -> Iterable[Dict]:
+    if path.suffix.lower() == ".jsonl":
+        with path.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    yield json.loads(line)
+        return
+
     text = path.read_text(encoding="utf-8").strip()
     if not text:
-        return []
-
-    if path.suffix.lower() == ".jsonl":
-        return [json.loads(line) for line in text.splitlines() if line.strip()]
+        return
 
     data = json.loads(text)
     if isinstance(data, list):
-        return data
+        for e in data:
+            yield e
+        return
+
     if isinstance(data, dict) and isinstance(data.get("entries"), list):
-        return data["entries"]
+        for e in data["entries"]:
+            yield e
+        return
+
     raise ValueError("Unsupported OEWN input shape")
 
 
@@ -141,22 +162,40 @@ def main() -> None:
     if not db_path.exists():
         raise SystemExit(f"DB not found: {db_path} (create schema first)")
 
+    allow_langs = {normalize_lang(x) for x in args.allow_lang.split(",") if x.strip()}
+
     conn = sqlite3.connect(str(db_path))
     conn.execute("PRAGMA foreign_keys = ON")
     cur = conn.cursor()
 
-    inserted_words = inserted_senses = inserted_forms = 0
+    processed = inserted_words = inserted_senses = inserted_forms = skipped = 0
+
     for entry in load_entries(input_path):
+        entry_lang = normalize_lang(entry.get("lang") or "en")
+        if allow_langs and entry_lang not in allow_langs:
+            skipped += 1
+            continue
+
+        freq = entry.get("freq")
+        if args.min_freq is not None and freq is not None and float(freq) < args.min_freq:
+            skipped += 1
+            continue
+
         word_id = upsert_word(cur, entry, args.source, args.license_name)
+        processed += 1
         inserted_words += 1
         inserted_senses += upsert_senses(cur, word_id, entry.get("senses", []), args.source, args.license_name)
         inserted_forms += upsert_forms(cur, word_id, entry.get("forms", []), args.source, args.license_name)
+
+        if args.max_rows and processed >= args.max_rows:
+            break
 
     conn.commit()
     conn.close()
 
     print(
-        f"[OEWN ingest] words processed={inserted_words}, senses inserted={inserted_senses}, forms inserted={inserted_forms}"
+        "[OEWN ingest] "
+        f"words processed={processed}, senses inserted={inserted_senses}, forms inserted={inserted_forms}, skipped={skipped}"
     )
 
 

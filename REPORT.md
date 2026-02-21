@@ -101,6 +101,61 @@ sense_examples|5
 word_forms|4
 ```
 
-## 6) 호환성/영향
+## 6) 300MB MVP 데이터 전략
+초기 목표를 "약 300MB 내외"로 두고, 대용량 전체 적재 대신 **증분 배치**로 확장하는 방식을 채택.
+
+핵심 전략:
+1. **영어 데이터만 적재**
+   - `--allow_lang en` / `--allow_lang en,eng` 필터로 비영어 제외
+2. **예문 길이/품질 필터 적용**
+   - `--min_tokens`, `--max_tokens`로 너무 짧거나 긴 문장 제외
+3. **상위 빈도 단어 중심 컷오프**
+   - 단어 ingest 시 `--max_rows`로 1차 컷오프
+   - 예문 ingest 시 `--top_word_cutoff`로 상위 빈도 lemma에 매핑 가능한 예문 우선 적재
+4. **증분 적재 가능 구조**
+   - 모든 적재가 UPSERT/IGNORE 기반이라 같은 명령을 반복 실행해도 안전
+   - `*_MAX_ROWS` 값을 단계적으로 늘려 DB 용량을 300MB 근처로 맞춤
+
+추가된 실행 스크립트:
+- `etl/run_mvp_300mb.sh`
+
+실행 예시(실데이터 투입 시):
+```bash
+cd /Users/rooftop/.openclaw/workspace/english-education-site
+
+# 1차 배치(초기 용량 목표)
+DB_PATH=data/processed/dictionary.db \
+OEWN_INPUT=data/raw/oewn/oewn.jsonl \
+TATOEBA_INPUT=data/raw/tatoeba/sentences.tsv \
+OEWN_MAX_ROWS=120000 \
+TATOEBA_MAX_ROWS=400000 \
+TATOEBA_MIN_TOKENS=4 \
+TATOEBA_MAX_TOKENS=18 \
+TOP_WORD_CUTOFF=120000 \
+./etl/run_mvp_300mb.sh
+
+# 2차 증분(필요시 컷오프 상향)
+OEWN_MAX_ROWS=180000 TATOEBA_MAX_ROWS=650000 TOP_WORD_CUTOFF=180000 ./etl/run_mvp_300mb.sh
+```
+
+## 7) 1차 배치 실행 결과(현재 환경)
+현재 저장소에는 샘플 데이터만 존재하므로, 동일 전략 옵션을 적용해 1차 적재를 실행.
+
+실행 명령:
+```bash
+rm -f data/processed/dictionary.db
+./etl/run_mvp_300mb.sh
+```
+
+결과:
+- words: 2
+- senses: 3
+- examples: 3
+- sense_examples: 5
+- word_forms: 4
+- DB 파일: `data/processed/dictionary.db`
+- DB 크기: `86,016 bytes` (`0.08 MB`)
+
+## 8) 호환성/영향
 - 기존 프론트 앱(`index.html`, `styles.css`, `app.js`) 미수정
-- 데이터 파이프라인 파일만 추가되어 기존 앱 동작 영향 없음
+- 데이터 파이프라인 파일만 변경/추가되어 기존 앱 동작 영향 없음
