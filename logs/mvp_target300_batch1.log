@@ -1,0 +1,13 @@
+[1/3] OEWN ingest
+[OEWN ingest] words processed=90000, senses inserted=131582, forms inserted=0, skipped=0
+[2/3] Tatoeba ingest
+[Tatoeba ingest] examples processed=250000, sense links inserted=1393672, skipped=410276
+[3/3] DB stats
+words|90000
+senses|131582
+examples|250000
+sense_examples|1393672
+word_forms|0
+DB_SIZE_BYTES=236699648
+DB_SIZE_MB=225.73
+Done. Re-run with larger *_MAX_ROWS for incremental expansion.
