@@ -1,105 +1,106 @@
-# English Education Site 개편 작업 보고서
+# English Education Site 작업 보고서 (Offline Dictionary MVP)
 
-## 0) 프로젝트 루트
-- 작업 루트: `english-education-site/`
-- 아키텍처: 프론트 단일 SPA(정적 파일 + localStorage)
+## 0) 작업 목표
+PRD 기준으로 로컬 sqlite 기반 오프라인 사전+예문 데이터 인프라 MVP를 구축.
 
-## 1) 이번 단계 목표
-기존 REPORT.md의 미완 항목 중 아래 2가지를 MVP+1 수준으로 구현:
-- 실가입/인증 플로우
-- 관리자 권한/감사로그
+## 1) 구현 결과 요약
+완료한 필수 작업:
+1. 디렉토리 구성: `data/raw`, `data/processed`, `etl`, `sql`
+2. sqlite 스키마 작성: `sql/schema.sql`
+   - `words`, `senses`, `examples`, `sense_examples`, `word_forms`
+   - 모든 핵심 테이블에 `source`, `license`, `source_ref` 반영
+   - 인덱스 + 예문 FTS5(`examples_fts`) 포함
+3. ingest 스크립트 작성
+   - `etl/ingest_oewn.py` (OEWN/WordNet 형태 JSON/JSONL 처리)
+   - `etl/ingest_tatoeba.py` (Tatoeba TSV 처리)
+4. 샘플 데이터로 E2E 적재 구성
+   - `data/raw/sample_oewn.jsonl`
+   - `data/raw/sample_tatoeba.tsv`
+5. 최소 조회 모듈 추가
+   - `etl/query_demo.py` (lemma 기반 뜻/예문 조회)
+6. 라이선스/출처 문서 추가
+   - `DATA_LICENSES.md`
+7. 실행 가이드 + 검증 로그 문서화 (본 문서)
 
-## 2) 구현 내용
+## 2) 파일 구조 (추가/변경)
+- `sql/schema.sql`
+- `etl/ingest_oewn.py`
+- `etl/ingest_tatoeba.py`
+- `etl/query_demo.py`
+- `data/raw/sample_oewn.jsonl`
+- `data/raw/sample_tatoeba.tsv`
+- `DATA_LICENSES.md`
+- `REPORT.md` (갱신)
 
-### A. 실가입/인증(localStorage 기반)
-- 회원가입 추가: 이메일 + 비밀번호 + role(learner/admin)
-- 최소 검증:
-  - 이메일 정규식 검증
-  - 비밀번호 6자 이상
-  - 중복 이메일 가입 방지
-- 로그인/로그아웃 플로우 추가
-- 현재 로그인 사용자 상태(`currentUserId`) 저장
-- 초기 admin 시드 계정 자동 생성
-  - `admin@english-loop.local / Admin1234`
-
-### B. 역할(role) 및 접근 제어
-- 사용자 role 도입: `learner`, `admin`
-- 관리자 페이지 가드 추가:
-  - admin 계정 로그인 시에만 레슨 추가 입력폼 노출
-  - 비관리자/게스트는 관리자 작업 차단 + 안내 메시지
-- 레슨 추가 API(`addLessonByAdmin`)에서 role 재검증
-
-### C. 감사로그(audit log)
-- 감사로그 `auditLogs` 저장 구조 추가
-- 다음 이벤트 기록:
-  - `signup`
-  - `login`
-  - `logout`
-  - `lesson_add`
-  - `subscription_change`
-- 로그 항목 구성:
-  - 시각(ts), 행위자(actor), 액션(action), 상세(detail)
-- 관리자 카드에 최근 감사로그 표시(최대 10개)
-
-### D. UI 반영
-- 헤더에 현재 사용자/권한 표시
-  - 예: `현재 사용자: foo@bar.com (role: learner)`
-- 인증 섹션 신설(가입/로그인/로그아웃)
-- 관리자 섹션에 접근 상태 표시 및 감사로그 리스트 추가
-
-## 3) PRD 체크리스트(업데이트)
-- [x] 온보딩 진단
-- [x] 학습 세션
-- [x] SRS 복습 큐
-- [x] 진도보드
-- [x] 검색/추천 기본
-- [x] 구독 퍼널
-- [x] 관리자 기본
-- [x] 가입/인증(실사용 플로우, localStorage MVP+1)
-- [~] 결제 연동/구독 실청구: 미구현(플랜 선택 UI+로그)
-- [x] 관리자 권한 인증/감사로그(프론트 MVP+1)
-
-## 4) 변경 파일 목록
-- `english-education-site/index.html`
-- `english-education-site/styles.css`
-- `english-education-site/app.js`
-- `english-education-site/REPORT.md`
-
-## 5) 실행 방법
+## 3) 실행 가이드
 ```bash
 cd /Users/rooftop/.openclaw/workspace/english-education-site
-python3 -m http.server 4173
-# 브라우저에서 http://127.0.0.1:4173/index.html 접속
+
+# 1) DB 생성 + 스키마 적용
+sqlite3 data/processed/dictionary.db < sql/schema.sql
+
+# 2) OEWN 샘플 적재
+python3 etl/ingest_oewn.py \
+  --db data/processed/dictionary.db \
+  --input data/raw/sample_oewn.jsonl
+
+# 3) Tatoeba 샘플 적재
+python3 etl/ingest_tatoeba.py \
+  --db data/processed/dictionary.db \
+  --input data/raw/sample_tatoeba.tsv
+
+# 4) 조회 데모
+python3 etl/query_demo.py --db data/processed/dictionary.db --lemma run
+python3 etl/query_demo.py --db data/processed/dictionary.db --lemma book
 ```
 
-## 6) 테스트 방법 및 결과
+## 4) 실데이터 투입 방법
+대용량 다운로드는 이번 작업에서 생략(샘플 우선)했으며, 실데이터 투입 경로/방법은 아래와 같음.
 
-### 6-1. 정적 문법 검사
+- OEWN 원본 위치(권장): `data/raw/oewn/`
+  - 현재 ingest 지원 형식: JSONL(권장), JSON(list 또는 `{"entries": [...]}`)
+- Tatoeba 원본 위치(권장): `data/raw/tatoeba/`
+  - 현재 ingest 지원 형식: TSV (`id, lang, sentence` 필수)
+
+예시:
 ```bash
-node --check app.js
+python3 etl/ingest_oewn.py --db data/processed/dictionary.db --input data/raw/oewn/oewn.jsonl
+python3 etl/ingest_tatoeba.py --db data/processed/dictionary.db --input data/raw/tatoeba/sentences.tsv
 ```
-- 결과: **통과(문법 오류 없음)**
 
-### 6-2. 로컬 서빙 스모크
+## 5) 검증 명령 및 결과
+실행 명령:
 ```bash
-python3 -m http.server 4173
-curl -I http://127.0.0.1:4173/index.html
+rm -f data/processed/dictionary.db
+sqlite3 data/processed/dictionary.db < sql/schema.sql
+python3 etl/ingest_oewn.py --db data/processed/dictionary.db --input data/raw/sample_oewn.jsonl
+python3 etl/ingest_tatoeba.py --db data/processed/dictionary.db --input data/raw/sample_tatoeba.tsv
+python3 etl/query_demo.py --db data/processed/dictionary.db --lemma run
+python3 etl/query_demo.py --db data/processed/dictionary.db --lemma book
+sqlite3 data/processed/dictionary.db "select 'words',count(*) from words union all select 'senses',count(*) from senses union all select 'examples',count(*) from examples union all select 'sense_examples',count(*) from sense_examples union all select 'word_forms',count(*) from word_forms;"
 ```
-- 결과: **HTTP 200 OK**
 
-### 6-3. 수동 기능 테스트 시나리오
-1. 회원가입(learner) → 자동 로그인 확인
-2. 로그아웃 → 로그인 재시도(정상/오류 케이스)
-3. learner 상태에서 관리자 영역 접근 차단 확인
-4. admin 계정 로그인(`admin@english-loop.local / Admin1234`) 후 레슨 추가 성공 확인
-5. 구독 버튼 클릭 시 subscription_change 로그 생성 확인
-6. 로그인/로그아웃/레슨추가/구독변경 로그가 감사로그에 누적되는지 확인
+실행 결과:
+```text
+[OEWN ingest] words processed=2, senses inserted=3, forms inserted=4
+[Tatoeba ingest] examples processed=3, sense links inserted=5
+WORD: run (verb) level=B1
+  - Sense#1: move fast by using one's feet
+  - Sense#2: operate or function
+EXAMPLES:
+  • I run every morning.
+  • This machine runs on battery power.
+WORD: book (noun) level=A1
+  - Sense#3: a written work or composition
+EXAMPLES:
+  • I borrowed a book from the library.
+words|2
+senses|3
+examples|3
+sense_examples|5
+word_forms|4
+```
 
-- 결과: **요구된 플로우 동작 확인(수동 점검)**
-
-## 7) 남은 TODO
-1. 비밀번호 해시 고도화(현재 데모용 인코딩)
-2. 세션 만료/자동 로그아웃 정책
-3. 역할별 기능 분리 고도화(RBAC 세분화)
-4. 백엔드 연동(실계정/토큰/서버 감사로그)
-5. E2E 자동화 테스트(Playwright)
+## 6) 호환성/영향
+- 기존 프론트 앱(`index.html`, `styles.css`, `app.js`) 미수정
+- 데이터 파이프라인 파일만 추가되어 기존 앱 동작 영향 없음

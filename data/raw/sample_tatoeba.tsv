@@ -1,0 +1,4 @@
+id	lang	sentence	license	source_ref	lemma	level	synthetic
+1	eng	I run every morning.	CC BY 2.0 FR	tatoeba:1	run	A2	0
+2	eng	This machine runs on battery power.	CC BY 2.0 FR	tatoeba:2	run	B1	0
+3	eng	I borrowed a book from the library.	CC BY 2.0 FR	tatoeba:3	book	A1	0
