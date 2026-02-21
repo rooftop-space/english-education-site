@@ -242,6 +242,91 @@ TATOEBA_MAX_TOKENS=20 \
 
 ---
 
+## 10) Level Recommendation 한국어 뜻(meaning_ko) 파이프라인 추가 (2026-02-21)
+
+### 10-1. 스키마/출력 구조 변경
+- `level_recommendations` 확장 컬럼 추가:
+  - `meaning_1_ko`, `meaning_2_ko`
+  - `ko_translation_source`, `ko_translation_is_machine`
+- JSON(`data/processed/level_recommendations.json`)에도 동일 필드 포함
+
+### 10-2. 번역 파이프라인(재설계 v2)
+재구축 스크립트:
+- `etl/translate_meanings_ko.py`
+
+핵심 구조:
+- 캐시 테이블: `meaning_translations_ko_v2`
+  - `meaning_en` PK 기준 캐시
+  - 소스(`source`), 갱신시각(`updated_at`) 기록
+- 증분 처리:
+  - 기본은 빈 `meaning_ko`만 번역
+  - `--force-refresh` 시 전체 재번역
+- 재시도:
+  - 배치 단위 `--max-retries` + 지수 backoff
+- 이중 반영:
+  - DB `level_recommendations.meaning_1_ko/meaning_2_ko`
+  - JSON `data/processed/level_recommendations.json`
+
+번역 소스(정책):
+1) **권장/신뢰 소스: DeepL API (`--provider deepl`)**
+   - 라이선스/약관: DeepL API Terms (상용 API)
+   - 요금/쿼터: Free 플랜 월 500,000 문자, Pro 과금(플랜별 상이)
+2) **비상 fallback: googletrans (`--provider googletrans`)**
+   - 비공식 웹 번역 래퍼, 운영 안정성/쿼터 보장 불가
+   - 본 파이프라인에서는 `--allow-unofficial-fallback`로만 허용
+
+권장 실행(DeepL Free):
+```bash
+DEEPL_API_KEY=... ../.venv/bin/python etl/translate_meanings_ko.py \
+  --db data/processed/dictionary.db \
+  --json-out data/processed/level_recommendations.json \
+  --levels A1,A2 \
+  --provider deepl \
+  --deepl-free
+```
+
+전 레벨 실행:
+```bash
+DEEPL_API_KEY=... ../.venv/bin/python etl/translate_meanings_ko.py \
+  --db data/processed/dictionary.db \
+  --json-out data/processed/level_recommendations.json \
+  --levels A1,A2,B1,B2,C1,C2 \
+  --provider deepl \
+  --deepl-free
+```
+
+### 10-3. 품질 룰
+- 빈 문자열/공백 뜻 제거 (`strip + whitespace normalize`)
+- 동일 한국어 뜻 중복 제거 (`meaning_1_ko == meaning_2_ko`면 `meaning_2_ko=NULL`)
+- 기계번역 메타 포함:
+  - `ko_translation_is_machine=true`
+  - `ko_translation_source="google_gtx"`
+
+### 10-4. 검증 방법
+```bash
+# 레벨별 ko 필드 채움 현황
+sqlite3 data/processed/dictionary.db "
+select level,
+       sum(case when meaning_1_ko is not null and trim(meaning_1_ko)<>'' then 1 else 0 end) as m1_ko,
+       sum(case when meaning_2_ko is not null and trim(meaning_2_ko)<>'' then 1 else 0 end) as m2_ko
+from level_recommendations
+group by level
+order by level;"
+
+# 샘플 확인
+python3 etl/level_recommendation_demo.py --db data/processed/dictionary.db --level A1 --limit 5
+```
+
+### 10-5. 샘플 결과 (일부)
+- `be` → `be priced at` = `가격이 ...이다`
+- `person` → `a human body (usually including the clothing)` = `인체(보통 옷을 포함)`
+- `have` → `undergo` = `겪다`
+- `say` → `utter aloud` = `큰 소리로 말하다`
+- `not` → `negation of a word or group of words` = `단어/어구의 부정`
+
+
+---
+
 ## 10) 레벨별 추천 단어/의미/예문 반영 (2026-02-21 추가)
 
 요구사항 대응으로 `data/processed/dictionary.db`를 기반으로 레벨 정규화 + 추천 세트를 생성하고 앱 연동용 산출물을 추가함.
@@ -336,3 +421,19 @@ python3 etl/level_recommendation_demo.py --db data/processed/dictionary.db --lev
 - 기존 `words/senses/examples/sense_examples` 원본 데이터는 변경하지 않음
 - 결과는 별도 테이블/뷰/JSON으로 생성하여 무결성 유지
 - `etl/build_level_recommendations.py`를 배치 반복 실행 가능(재생성 방식)
+
+### 10-7) 실행 상태(현재 세션)
+- 코드/문서 기준으로 **v2 파이프라인 재설계 완료**
+- 현재 환경에 `DEEPL_API_KEY`가 없어 DeepL 실주입은 미실행
+- DeepL 미사용 시 fallback(`googletrans`)은 비공식 소스이므로 운영 기본값에서 제외
+
+현재 DB 반영 현황:
+```sql
+SELECT level,
+       SUM(CASE WHEN meaning_1_ko IS NOT NULL AND TRIM(meaning_1_ko)<>'' THEN 1 ELSE 0 END) AS m1_ko,
+       SUM(CASE WHEN meaning_2_ko IS NOT NULL AND TRIM(meaning_2_ko)<>'' THEN 1 ELSE 0 END) AS m2_ko,
+       COUNT(*) AS total
+FROM level_recommendations
+GROUP BY level
+ORDER BY level;
+```
