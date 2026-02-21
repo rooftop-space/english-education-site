@@ -26,7 +26,6 @@
       "rank_pct_lte": 1.0
     }
   ],
-  "translation_source": "googletrans",
   "levels": {
     "A1": [
       {
@@ -5856,10 +5855,10 @@
         "freq": 84.0,
         "meaning_1": "to consider or examine in speech or writing",
         "meaning_2": "speak with others about (something); talk (something) over in detail; have a discussion",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: to consider or examine in speech or writing",
+        "meaning_2_ko": "자동번역 필요: speak with others about (something); talk (something) over in detail; have a discussion",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "to consider or examine in speech or writing",
@@ -5886,10 +5885,10 @@
         "freq": 84.0,
         "meaning_1": "the common people generally",
         "meaning_2": "a musical setting for a Mass",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the common people generally",
+        "meaning_2_ko": "자동번역 필요: a musical setting for a Mass",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the common people generally",
@@ -5916,10 +5915,10 @@
         "freq": 84.0,
         "meaning_1": "having ample fabric",
         "meaning_2": "having the normally expected amount",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: having ample fabric",
+        "meaning_2_ko": "자동번역 필요: having the normally expected amount",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "having ample fabric",
@@ -5946,10 +5945,10 @@
         "freq": 84.0,
         "meaning_1": "an indication that makes something evident",
         "meaning_2": "your basis for belief or disbelief; knowledge on which to base belief",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an indication that makes something evident",
+        "meaning_2_ko": "자동번역 필요: your basis for belief or disbelief; knowledge on which to base belief",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an indication that makes something evident",
@@ -5976,10 +5975,10 @@
         "freq": 84.0,
         "meaning_1": "the courage to carry on",
         "meaning_2": "a positive feeling of liking",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the courage to carry on",
+        "meaning_2_ko": "자동번역 필요: a positive feeling of liking",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the courage to carry on",
@@ -6004,10 +6003,10 @@
         "freq": 84.0,
         "meaning_1": "a job in an organization",
         "meaning_2": "a complex or critical or unusual difficulty",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a job in an organization",
+        "meaning_2_ko": "자동번역 필요: a complex or critical or unusual difficulty",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a job in an organization",
@@ -6032,10 +6031,10 @@
         "freq": 83.0,
         "meaning_1": "the item at the end",
         "meaning_2": "as the end result of a succession or process",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the item at the end",
+        "meaning_2_ko": "자동번역 필요: as the end result of a succession or process",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the item at the end",
@@ -6062,10 +6061,10 @@
         "freq": 83.0,
         "meaning_1": "have",
         "meaning_2": "bring in",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: have",
+        "meaning_2_ko": "자동번역 필요: bring in",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "have",
@@ -6092,10 +6091,10 @@
         "freq": 83.0,
         "meaning_1": "create by training and teaching",
         "meaning_2": "prepare for eating by applying heat",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: create by training and teaching",
+        "meaning_2_ko": "자동번역 필요: prepare for eating by applying heat",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "create by training and teaching",
@@ -6122,10 +6121,10 @@
         "freq": 83.0,
         "meaning_1": "provide treatment for",
         "meaning_2": "interact in a certain way",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: provide treatment for",
+        "meaning_2_ko": "자동번역 필요: interact in a certain way",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "provide treatment for",
@@ -6152,10 +6151,10 @@
         "freq": 83.0,
         "meaning_1": "adopt as a belief",
         "meaning_2": "be behind; approve of",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: adopt as a belief",
+        "meaning_2_ko": "자동번역 필요: be behind; approve of",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "adopt as a belief",
@@ -6182,10 +6181,10 @@
         "freq": 83.0,
         "meaning_1": "a quantity that is added",
         "meaning_2": "the act of increasing something",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a quantity that is added",
+        "meaning_2_ko": "자동번역 필요: the act of increasing something",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a quantity that is added",
@@ -6210,10 +6209,10 @@
         "freq": 82.0,
         "meaning_1": "the present time or age",
         "meaning_2": "the day that includes the present moment (as opposed to yesterday or tomorrow)",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the present time or age",
+        "meaning_2_ko": "자동번역 필요: the day that includes the present moment (as opposed to yesterday or tomorrow)",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the present time or age",
@@ -6240,10 +6239,10 @@
         "freq": 82.0,
         "meaning_1": "get pleasure from",
         "meaning_2": "be enamored or in love with",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: get pleasure from",
+        "meaning_2_ko": "자동번역 필요: be enamored or in love with",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "get pleasure from",
@@ -6270,10 +6269,10 @@
         "freq": 82.0,
         "meaning_1": "anything in accord with principles of justice",
         "meaning_2": "the hand that is on the right side of the body",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: anything in accord with principles of justice",
+        "meaning_2_ko": "자동번역 필요: the hand that is on the right side of the body",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "anything in accord with principles of justice",
@@ -6300,10 +6299,10 @@
         "freq": 82.0,
         "meaning_1": "express a supposition",
         "meaning_2": "expect, believe, or suppose",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: express a supposition",
+        "meaning_2_ko": "자동번역 필요: expect, believe, or suppose",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "express a supposition",
@@ -6330,10 +6329,10 @@
         "freq": 82.0,
         "meaning_1": "food or meals in general",
         "meaning_2": "flat tableland with steep edges",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: food or meals in general",
+        "meaning_2_ko": "자동번역 필요: flat tableland with steep edges",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "food or meals in general",
@@ -6360,10 +6359,10 @@
         "freq": 82.0,
         "meaning_1": "commend",
         "meaning_2": "make mention of",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: commend",
+        "meaning_2_ko": "자동번역 필요: make mention of",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "commend",
@@ -6390,10 +6389,10 @@
         "freq": 82.0,
         "meaning_1": "a distant region",
         "meaning_2": "a remote point in time",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a distant region",
+        "meaning_2_ko": "자동번역 필요: a remote point in time",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a distant region",
@@ -6420,10 +6419,10 @@
         "freq": 81.0,
         "meaning_1": "a large ocean inlet or deep bay",
         "meaning_2": "the audible part of a transmitted signal",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a large ocean inlet or deep bay",
+        "meaning_2_ko": "자동번역 필요: the audible part of a transmitted signal",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a large ocean inlet or deep bay",
@@ -6450,10 +6449,10 @@
         "freq": 81.0,
         "meaning_1": "show an image of",
         "meaning_2": "manifest or bring back",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: show an image of",
+        "meaning_2_ko": "자동번역 필요: manifest or bring back",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "show an image of",
@@ -6480,10 +6479,10 @@
         "freq": 81.0,
         "meaning_1": "a learner who is enrolled in an educational institution",
         "meaning_2": "someone (especially a child) who learns (as from a teacher) or takes up knowledge or beliefs",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a learner who is enrolled in an educational institution",
+        "meaning_2_ko": "자동번역 필요: someone (especially a child) who learns (as from a teacher) or takes up knowledge or beliefs",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a learner who is enrolled in an educational institution",
@@ -6506,10 +6505,10 @@
         "freq": 81.0,
         "meaning_1": "having a strong healthy body",
         "meaning_2": "have the skills and qualifications to do things well",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: having a strong healthy body",
+        "meaning_2_ko": "자동번역 필요: have the skills and qualifications to do things well",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "having a strong healthy body",
@@ -6532,10 +6531,10 @@
         "freq": 80.0,
         "meaning_1": "the founder of a family",
         "meaning_2": "the head of an organized crime family",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the founder of a family",
+        "meaning_2_ko": "자동번역 필요: the head of an organized crime family",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the founder of a family",
@@ -6562,10 +6561,10 @@
         "freq": 80.0,
         "meaning_1": "a quantifier that can be used with count nouns and is often preceded by ‘a’; a small but indefinite number",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: a quantifier that can be used with count nouns and is often preceded by ‘a’; a small but indefinite number",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a quantifier that can be used with count nouns and is often preceded by ‘a’; a small but indefinite number",
@@ -6584,10 +6583,10 @@
         "freq": 80.0,
         "meaning_1": "relating to a person",
         "meaning_2": "characteristic of humanity",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: relating to a person",
+        "meaning_2_ko": "자동번역 필요: characteristic of humanity",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "relating to a person",
@@ -6614,10 +6613,10 @@
         "freq": 80.0,
         "meaning_1": "an anxious feeling",
         "meaning_2": "a feeling of profound respect for someone or something",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an anxious feeling",
+        "meaning_2_ko": "자동번역 필요: a feeling of profound respect for someone or something",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an anxious feeling",
@@ -6644,10 +6643,10 @@
         "freq": 80.0,
         "meaning_1": "dried out",
         "meaning_2": "dispassionate",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: dried out",
+        "meaning_2_ko": "자동번역 필요: dispassionate",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "dried out",
@@ -6674,10 +6673,10 @@
         "freq": 80.0,
         "meaning_1": "certain not to fail",
         "meaning_2": "infallible or unfailing",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: certain not to fail",
+        "meaning_2_ko": "자동번역 필요: infallible or unfailing",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "certain not to fail",
@@ -6704,10 +6703,10 @@
         "freq": 80.0,
         "meaning_1": "easily deciphered",
         "meaning_2": "readily apparent to the mind",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: easily deciphered",
+        "meaning_2_ko": "자동번역 필요: readily apparent to the mind",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "easily deciphered",
@@ -6734,10 +6733,10 @@
         "freq": 80.0,
         "meaning_1": "comparative of little",
         "meaning_2": "used to form the comparative of some adjectives and adverbs, indicates that the adjective or adverb is less of something",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: comparative of little",
+        "meaning_2_ko": "자동번역 필요: used to form the comparative of some adjectives and adverbs, indicates that the adjective or adverb is less of something",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "comparative of little",
@@ -6764,10 +6763,10 @@
         "freq": 80.0,
         "meaning_1": "get rid of",
         "meaning_2": "undermine or cause to waver",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: get rid of",
+        "meaning_2_ko": "자동번역 필요: undermine or cause to waver",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "get rid of",
@@ -6794,10 +6793,10 @@
         "freq": 80.0,
         "meaning_1": "inside the country",
         "meaning_2": "of or relating to nationality",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: inside the country",
+        "meaning_2_ko": "자동번역 필요: of or relating to nationality",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "inside the country",
@@ -6824,10 +6823,10 @@
         "freq": 80.0,
         "meaning_1": "very tired",
         "meaning_2": "devoid of activity",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: very tired",
+        "meaning_2_ko": "자동번역 필요: devoid of activity",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "very tired",
@@ -6854,10 +6853,10 @@
         "freq": 79.0,
         "meaning_1": "in the area or vicinity",
         "meaning_2": "in rotation or succession",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: in the area or vicinity",
+        "meaning_2_ko": "자동번역 필요: in rotation or succession",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "in the area or vicinity",
@@ -6884,10 +6883,10 @@
         "freq": 79.0,
         "meaning_1": "save from sins",
         "meaning_2": "retain rights to",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: save from sins",
+        "meaning_2_ko": "자동번역 필요: retain rights to",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "save from sins",
@@ -6914,10 +6913,10 @@
         "freq": 79.0,
         "meaning_1": "to a later time",
         "meaning_2": "to a higher intensity",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: to a later time",
+        "meaning_2_ko": "자동번역 필요: to a higher intensity",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "to a later time",
@@ -6944,10 +6943,10 @@
         "freq": 79.0,
         "meaning_1": "express with a smile",
         "meaning_2": "change one's facial expression by spreading the lips, often to signal pleasure",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: express with a smile",
+        "meaning_2_ko": "자동번역 필요: change one's facial expression by spreading the lips, often to signal pleasure",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "express with a smile",
@@ -6974,10 +6973,10 @@
         "freq": 79.0,
         "meaning_1": "have certain dimensions",
         "meaning_2": "express as a number or measure or quantity",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: have certain dimensions",
+        "meaning_2_ko": "자동번역 필요: express as a number or measure or quantity",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "have certain dimensions",
@@ -7004,10 +7003,10 @@
         "freq": 79.0,
         "meaning_1": "special emphasis attached to something",
         "meaning_2": "difficulty that causes worry or emotional tension",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: special emphasis attached to something",
+        "meaning_2_ko": "자동번역 필요: difficulty that causes worry or emotional tension",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "special emphasis attached to something",
@@ -7034,10 +7033,10 @@
         "freq": 79.0,
         "meaning_1": "an arrangement scheme",
         "meaning_2": "scale drawing of a structure",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an arrangement scheme",
+        "meaning_2_ko": "자동번역 필요: scale drawing of a structure",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an arrangement scheme",
@@ -7064,10 +7063,10 @@
         "freq": 79.0,
         "meaning_1": "an administrative division of a county",
         "meaning_2": "the people living in a municipality smaller than a city",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an administrative division of a county",
+        "meaning_2_ko": "자동번역 필요: the people living in a municipality smaller than a city",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an administrative division of a county",
@@ -7090,10 +7089,10 @@
         "freq": 78.0,
         "meaning_1": "take in solid food",
         "meaning_2": "eat a meal; take a meal",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: take in solid food",
+        "meaning_2_ko": "자동번역 필요: eat a meal; take a meal",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "take in solid food",
@@ -7120,10 +7119,10 @@
         "freq": 78.0,
         "meaning_1": "a severe trial",
         "meaning_2": "intense adverse criticism",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a severe trial",
+        "meaning_2_ko": "자동번역 필요: intense adverse criticism",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a severe trial",
@@ -7150,10 +7149,10 @@
         "freq": 78.0,
         "meaning_1": "be comparable",
         "meaning_2": "examine and note the similarities or differences of",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: be comparable",
+        "meaning_2_ko": "자동번역 필요: examine and note the similarities or differences of",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "be comparable",
@@ -7180,10 +7179,10 @@
         "freq": 78.0,
         "meaning_1": "in music",
         "meaning_2": "without speed (‘slow’ is sometimes used informally for ‘slowly’)",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: in music",
+        "meaning_2_ko": "자동번역 필요: without speed (‘slow’ is sometimes used informally for ‘slowly’)",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "in music",
@@ -7210,10 +7209,10 @@
         "freq": 78.0,
         "meaning_1": "gratify",
         "meaning_2": "give food to",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: gratify",
+        "meaning_2_ko": "자동번역 필요: give food to",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "gratify",
@@ -7240,10 +7239,10 @@
         "freq": 78.0,
         "meaning_1": "attain",
         "meaning_2": "find unexpectedly",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: attain",
+        "meaning_2_ko": "자동번역 필요: find unexpectedly",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "attain",
@@ -7270,10 +7269,10 @@
         "freq": 78.0,
         "meaning_1": "assail",
         "meaning_2": "pay a brief visit",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: assail",
+        "meaning_2_ko": "자동번역 필요: pay a brief visit",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "assail",
@@ -7300,10 +7299,10 @@
         "freq": 78.0,
         "meaning_1": "forming a right angle",
         "meaning_2": "in accordance with scientific laws",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: forming a right angle",
+        "meaning_2_ko": "자동번역 필요: in accordance with scientific laws",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "forming a right angle",
@@ -7326,10 +7325,10 @@
         "freq": 77.0,
         "meaning_1": "crowded",
         "meaning_2": "of textiles",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: crowded",
+        "meaning_2_ko": "자동번역 필요: of textiles",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "crowded",
@@ -7356,10 +7355,10 @@
         "freq": 77.0,
         "meaning_1": "being one more than five",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: being one more than five",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "being one more than five",
@@ -7378,10 +7377,10 @@
         "freq": 77.0,
         "meaning_1": "expect, believe, or suppose",
         "meaning_2": "form a mental image of something that is not present or that is not the case",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: expect, believe, or suppose",
+        "meaning_2_ko": "자동번역 필요: form a mental image of something that is not present or that is not the case",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "expect, believe, or suppose",
@@ -7408,10 +7407,10 @@
         "freq": 77.0,
         "meaning_1": "a courteous act indicating affection",
         "meaning_2": "the faculty or power of mental concentration",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a courteous act indicating affection",
+        "meaning_2_ko": "자동번역 필요: the faculty or power of mental concentration",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a courteous act indicating affection",
@@ -7438,10 +7437,10 @@
         "freq": 77.0,
         "meaning_1": "afford possibility",
         "meaning_2": "give access or entrance to",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: afford possibility",
+        "meaning_2_ko": "자동번역 필요: give access or entrance to",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "afford possibility",
@@ -7468,10 +7467,10 @@
         "freq": 76.0,
         "meaning_1": "not to be taken lightly",
         "meaning_2": "coinciding with reality",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: not to be taken lightly",
+        "meaning_2_ko": "자동번역 필요: coinciding with reality",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "not to be taken lightly",
@@ -7498,10 +7497,10 @@
         "freq": 76.0,
         "meaning_1": "glowing white with heat",
         "meaning_2": "restricted to whites only",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: glowing white with heat",
+        "meaning_2_ko": "자동번역 필요: restricted to whites only",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "glowing white with heat",
@@ -7528,10 +7527,10 @@
         "freq": 76.0,
         "meaning_1": "move with force",
         "meaning_2": "approach a certain age or speed",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: move with force",
+        "meaning_2_ko": "자동번역 필요: approach a certain age or speed",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "move with force",
@@ -7558,10 +7557,10 @@
         "freq": 76.0,
         "meaning_1": "a problem",
         "meaning_2": "a vaguely specified concern",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a problem",
+        "meaning_2_ko": "자동번역 필요: a vaguely specified concern",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a problem",
@@ -7588,10 +7587,10 @@
         "freq": 76.0,
         "meaning_1": "high social status",
         "meaning_2": "a degree or grade of excellence or worth",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: high social status",
+        "meaning_2_ko": "자동번역 필요: a degree or grade of excellence or worth",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "high social status",
@@ -7618,10 +7617,10 @@
         "freq": 76.0,
         "meaning_1": "a collection of facts from which conclusions may be drawn",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: a collection of facts from which conclusions may be drawn",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a collection of facts from which conclusions may be drawn",
@@ -7640,10 +7639,10 @@
         "freq": 76.0,
         "meaning_1": "summon to court",
         "meaning_2": "lay legal claim to",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: summon to court",
+        "meaning_2_ko": "자동번역 필요: lay legal claim to",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "summon to court",
@@ -7670,10 +7669,10 @@
         "freq": 75.0,
         "meaning_1": "a licensed medical practitioner",
         "meaning_2": "a person who holds Ph.D. degree (or the equivalent) from an academic institution",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a licensed medical practitioner",
+        "meaning_2_ko": "자동번역 필요: a person who holds Ph.D. degree (or the equivalent) from an academic institution",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a licensed medical practitioner",
@@ -7700,10 +7699,10 @@
         "freq": 75.0,
         "meaning_1": "use as a basis for; found on",
         "meaning_2": "situate as a center of operations",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: use as a basis for; found on",
+        "meaning_2_ko": "자동번역 필요: situate as a center of operations",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "use as a basis for; found on",
@@ -7726,10 +7725,10 @@
         "freq": 74.0,
         "meaning_1": "be exhibited",
         "meaning_2": "give heed (to)",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: be exhibited",
+        "meaning_2_ko": "자동번역 필요: give heed (to)",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "be exhibited",
@@ -7756,10 +7755,10 @@
         "freq": 74.0,
         "meaning_1": "the creation of beautiful or significant things",
         "meaning_2": "the products of human creativity; works of art collectively",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the creation of beautiful or significant things",
+        "meaning_2_ko": "자동번역 필요: the products of human creativity; works of art collectively",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the creation of beautiful or significant things",
@@ -7786,10 +7785,10 @@
         "freq": 74.0,
         "meaning_1": "the territory occupied by a nation",
         "meaning_2": "the solid part of the earth's surface",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the territory occupied by a nation",
+        "meaning_2_ko": "자동번역 필요: the solid part of the earth's surface",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the territory occupied by a nation",
@@ -7816,10 +7815,10 @@
         "freq": 74.0,
         "meaning_1": "lacking foresight or scope",
         "meaning_2": "marked by rude or peremptory shortness",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: lacking foresight or scope",
+        "meaning_2_ko": "자동번역 필요: marked by rude or peremptory shortness",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "lacking foresight or scope",
@@ -7846,10 +7845,10 @@
         "freq": 74.0,
         "meaning_1": "having uniform application",
         "meaning_2": "not married or related to the unmarried state",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: having uniform application",
+        "meaning_2_ko": "자동번역 필요: not married or related to the unmarried state",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "having uniform application",
@@ -7876,10 +7875,10 @@
         "freq": 74.0,
         "meaning_1": "govern or manage",
         "meaning_2": "cause to go somewhere",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: govern or manage",
+        "meaning_2_ko": "자동번역 필요: cause to go somewhere",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "govern or manage",
@@ -7904,10 +7903,10 @@
         "freq": 73.0,
         "meaning_1": "where passengers ride up and down",
         "meaning_2": "a wheeled vehicle adapted to the rails of railroad",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: where passengers ride up and down",
+        "meaning_2_ko": "자동번역 필요: a wheeled vehicle adapted to the rails of railroad",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "where passengers ride up and down",
@@ -7934,10 +7933,10 @@
         "freq": 73.0,
         "meaning_1": "the profession or art of a writer",
         "meaning_2": "the humanistic study of a body of literature",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the profession or art of a writer",
+        "meaning_2_ko": "자동번역 필요: the humanistic study of a body of literature",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the profession or art of a writer",
@@ -7964,10 +7963,10 @@
         "freq": 73.0,
         "meaning_1": "lofty in style",
         "meaning_2": "impressively difficult",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: lofty in style",
+        "meaning_2_ko": "자동번역 필요: impressively difficult",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "lofty in style",
@@ -7994,10 +7993,10 @@
         "freq": 73.0,
         "meaning_1": "a large magnitude",
         "meaning_2": "the actual state of affairs",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a large magnitude",
+        "meaning_2_ko": "자동번역 필요: the actual state of affairs",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a large magnitude",
@@ -8022,10 +8021,10 @@
         "freq": 73.0,
         "meaning_1": "move towards",
         "meaning_2": "come near in time",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: move towards",
+        "meaning_2_ko": "자동번역 필요: come near in time",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "move towards",
@@ -8050,10 +8049,10 @@
         "freq": 73.0,
         "meaning_1": "coming next after the second and just before the fourth in position",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: coming next after the second and just before the fourth in position",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "coming next after the second and just before the fourth in position",
@@ -8071,10 +8070,10 @@
         "freq": 73.0,
         "meaning_1": "and nothing more",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: and nothing more",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "and nothing more",
@@ -8091,10 +8090,10 @@
         "freq": 73.0,
         "meaning_1": "unornamented",
         "meaning_2": "easy and not involved or complicated",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: unornamented",
+        "meaning_2_ko": "자동번역 필요: easy and not involved or complicated",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "unornamented",
@@ -8117,10 +8116,10 @@
         "freq": 72.0,
         "meaning_1": "a state of prosperity or fame",
         "meaning_2": "an attainment that is successful",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a state of prosperity or fame",
+        "meaning_2_ko": "자동번역 필요: an attainment that is successful",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a state of prosperity or fame",
@@ -8147,10 +8146,10 @@
         "freq": 72.0,
         "meaning_1": "affecting the people or community as a whole",
         "meaning_2": "not private; open to or concerning the people as a whole",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: affecting the people or community as a whole",
+        "meaning_2_ko": "자동번역 필요: not private; open to or concerning the people as a whole",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "affecting the people or community as a whole",
@@ -8177,10 +8176,10 @@
         "freq": 72.0,
         "meaning_1": "an institution to express belief in a divine power",
         "meaning_2": "a strong belief in a supernatural power or powers that control human destiny",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an institution to express belief in a divine power",
+        "meaning_2_ko": "자동번역 필요: a strong belief in a supernatural power or powers that control human destiny",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an institution to express belief in a divine power",
@@ -8207,10 +8206,10 @@
         "freq": 72.0,
         "meaning_1": "a medium for written communication",
         "meaning_2": "a business firm that publishes newspapers",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a medium for written communication",
+        "meaning_2_ko": "자동번역 필요: a business firm that publishes newspapers",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a medium for written communication",
@@ -8237,10 +8236,10 @@
         "freq": 72.0,
         "meaning_1": "a belief that can guide behavior",
         "meaning_2": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a belief that can guide behavior",
+        "meaning_2_ko": "자동번역 필요: a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a belief that can guide behavior",
@@ -8267,10 +8266,10 @@
         "freq": 72.0,
         "meaning_1": "a short account of the news",
         "meaning_2": "the act of informing by verbal report",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a short account of the news",
+        "meaning_2_ko": "자동번역 필요: the act of informing by verbal report",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a short account of the news",
@@ -8297,10 +8296,10 @@
         "freq": 72.0,
         "meaning_1": "put (an animal) to death",
         "meaning_2": "defeat soundly and humiliatingly",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: put (an animal) to death",
+        "meaning_2_ko": "자동번역 필요: defeat soundly and humiliatingly",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "put (an animal) to death",
@@ -8325,10 +8324,10 @@
         "freq": 72.0,
         "meaning_1": "an award earned by participation in a school sport",
         "meaning_2": "a written message addressed to a person or organization",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an award earned by participation in a school sport",
+        "meaning_2_ko": "자동번역 필요: a written message addressed to a person or organization",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an award earned by participation in a school sport",
@@ -8351,10 +8350,10 @@
         "freq": 71.0,
         "meaning_1": "being one more than nine",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: being one more than nine",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "being one more than nine",
@@ -8373,10 +8372,10 @@
         "freq": 71.0,
         "meaning_1": "ahead of the times",
         "meaning_2": "relating to a recently developed fashion or style",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: ahead of the times",
+        "meaning_2_ko": "자동번역 필요: relating to a recently developed fashion or style",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "ahead of the times",
@@ -8403,10 +8402,10 @@
         "freq": 71.0,
         "meaning_1": "become ignited",
         "meaning_2": "cause to go off",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: become ignited",
+        "meaning_2_ko": "자동번역 필요: cause to go off",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "become ignited",
@@ -8433,10 +8432,10 @@
         "freq": 71.0,
         "meaning_1": "commonly encountered",
         "meaning_2": "to be expected; standard",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: commonly encountered",
+        "meaning_2_ko": "자동번역 필요: to be expected; standard",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "commonly encountered",
@@ -8463,10 +8462,10 @@
         "freq": 71.0,
         "meaning_1": "a manifestation of insincerity",
         "meaning_2": "a subdivision of a play or opera or ballet",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a manifestation of insincerity",
+        "meaning_2_ko": "자동번역 필요: a subdivision of a play or opera or ballet",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a manifestation of insincerity",
@@ -8493,10 +8492,10 @@
         "freq": 71.0,
         "meaning_1": "financially rewarding",
         "meaning_2": "of or relating to the science of economics",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: financially rewarding",
+        "meaning_2_ko": "자동번역 필요: of or relating to the science of economics",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "financially rewarding",
@@ -8523,10 +8522,10 @@
         "freq": 71.0,
         "meaning_1": "activity leading to skilled behavior",
         "meaning_2": "the result of good upbringing (especially knowledge of correct social behavior)",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: activity leading to skilled behavior",
+        "meaning_2_ko": "자동번역 필요: the result of good upbringing (especially knowledge of correct social behavior)",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "activity leading to skilled behavior",
@@ -8553,10 +8552,10 @@
         "freq": 71.0,
         "meaning_1": "highly skilled",
         "meaning_2": "having come or been brought to a conclusion",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: highly skilled",
+        "meaning_2_ko": "자동번역 필요: having come or been brought to a conclusion",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "highly skilled",
@@ -8583,10 +8582,10 @@
         "freq": 71.0,
         "meaning_1": "find unexpectedly",
         "meaning_2": "make a discovery, make a new finding",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: find unexpectedly",
+        "meaning_2_ko": "자동번역 필요: make a discovery, make a new finding",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "find unexpectedly",
@@ -8613,10 +8612,10 @@
         "freq": 71.0,
         "meaning_1": "persevering determination to perform a task",
         "meaning_2": "the organized action of making of goods and services for sale",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: persevering determination to perform a task",
+        "meaning_2_ko": "자동번역 필요: the organized action of making of goods and services for sale",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "persevering determination to perform a task",
@@ -8641,10 +8640,10 @@
         "freq": 71.0,
         "meaning_1": "hang loosely",
         "meaning_2": "influence decisively",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: hang loosely",
+        "meaning_2_ko": "자동번역 필요: influence decisively",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "hang loosely",
@@ -8669,10 +8668,10 @@
         "freq": 70.0,
         "meaning_1": "a single person or thing",
         "meaning_2": "the smallest whole number or a numeral representing this number",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a single person or thing",
+        "meaning_2_ko": "자동번역 필요: the smallest whole number or a numeral representing this number",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a single person or thing",
@@ -8699,10 +8698,10 @@
         "freq": 70.0,
         "meaning_1": "strong and sure",
         "meaning_2": "not faint or feeble",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: strong and sure",
+        "meaning_2_ko": "자동번역 필요: not faint or feeble",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "strong and sure",
@@ -8729,10 +8728,10 @@
         "freq": 70.0,
         "meaning_1": "cost of bribing someone",
         "meaning_2": "the high value or worth of something",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: cost of bribing someone",
+        "meaning_2_ko": "자동번역 필요: the high value or worth of something",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "cost of bribing someone",
@@ -8759,10 +8758,10 @@
         "freq": 70.0,
         "meaning_1": "something that remunerates",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: something that remunerates",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "something that remunerates",
@@ -8779,10 +8778,10 @@
         "freq": 69.0,
         "meaning_1": "precisely accurate",
         "meaning_2": "socially right or correct",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: precisely accurate",
+        "meaning_2_ko": "자동번역 필요: socially right or correct",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "precisely accurate",
@@ -8809,10 +8808,10 @@
         "freq": 69.0,
         "meaning_1": "provide with a finish",
         "meaning_2": "finally be or do something",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: provide with a finish",
+        "meaning_2_ko": "자동번역 필요: finally be or do something",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "provide with a finish",
@@ -8839,10 +8838,10 @@
         "freq": 69.0,
         "meaning_1": "(football) a person who plays in the backfield",
         "meaning_2": "the side that goes last or is not normally seen",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: (football) a person who plays in the backfield",
+        "meaning_2_ko": "자동번역 필요: the side that goes last or is not normally seen",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "(football) a person who plays in the backfield",
@@ -8869,10 +8868,10 @@
         "freq": 69.0,
         "meaning_1": "street names for marijuana",
         "meaning_2": "something with no concrete substance",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: street names for marijuana",
+        "meaning_2_ko": "자동번역 필요: something with no concrete substance",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "street names for marijuana",
@@ -8899,10 +8898,10 @@
         "freq": 69.0,
         "meaning_1": "play a role or part",
         "meaning_2": "discharge one's duties",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: play a role or part",
+        "meaning_2_ko": "자동번역 필요: discharge one's duties",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "play a role or part",
@@ -8929,10 +8928,10 @@
         "freq": 69.0,
         "meaning_1": "at the same time",
         "meaning_2": "with a common plan",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: at the same time",
+        "meaning_2_ko": "자동번역 필요: with a common plan",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "at the same time",
@@ -8959,10 +8958,10 @@
         "freq": 69.0,
         "meaning_1": "not strict",
         "meaning_2": "affording comfort",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: not strict",
+        "meaning_2_ko": "자동번역 필요: affording comfort",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "not strict",
@@ -8989,10 +8988,10 @@
         "freq": 69.0,
         "meaning_1": "the sum of recognized accomplishments",
         "meaning_2": "the number of wins versus losses and ties a team has had",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the sum of recognized accomplishments",
+        "meaning_2_ko": "자동번역 필요: the number of wins versus losses and ties a team has had",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the sum of recognized accomplishments",
@@ -9017,10 +9016,10 @@
         "freq": 69.0,
         "meaning_1": "offer verbally",
         "meaning_2": "continue or extend",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: offer verbally",
+        "meaning_2_ko": "자동번역 필요: continue or extend",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "offer verbally",
@@ -9043,10 +9042,10 @@
         "freq": 68.0,
         "meaning_1": "at or in the front",
         "meaning_2": "earlier in time; previously",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: at or in the front",
+        "meaning_2_ko": "자동번역 필요: earlier in time; previously",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "at or in the front",
@@ -9073,10 +9072,10 @@
         "freq": 68.0,
         "meaning_1": "extremely dark",
         "meaning_2": "soiled with dirt or soot",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: extremely dark",
+        "meaning_2_ko": "자동번역 필요: soiled with dirt or soot",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "extremely dark",
@@ -9103,10 +9102,10 @@
         "freq": 68.0,
         "meaning_1": "first and most important",
         "meaning_2": "added to a regular schedule",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: first and most important",
+        "meaning_2_ko": "자동번역 필요: added to a regular schedule",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "first and most important",
@@ -9133,10 +9132,10 @@
         "freq": 68.0,
         "meaning_1": "an approximate definition or example",
         "meaning_2": "a person of a particular character or nature",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an approximate definition or example",
+        "meaning_2_ko": "자동번역 필요: a person of a particular character or nature",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an approximate definition or example",
@@ -9163,10 +9162,10 @@
         "freq": 68.0,
         "meaning_1": "the status or fact of being elected",
         "meaning_2": "a vote to select the winner of a position or political office",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the status or fact of being elected",
+        "meaning_2_ko": "자동번역 필요: a vote to select the winner of a position or political office",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the status or fact of being elected",
@@ -9191,10 +9190,10 @@
         "freq": 67.0,
         "meaning_1": "strain abnormally",
         "meaning_2": "strip of feathers",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: strain abnormally",
+        "meaning_2_ko": "자동번역 필요: strip of feathers",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "strain abnormally",
@@ -9221,10 +9220,10 @@
         "freq": 67.0,
         "meaning_1": "a possibility due to a favorable combination of circumstances",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: a possibility due to a favorable combination of circumstances",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a possibility due to a favorable combination of circumstances",
@@ -9243,10 +9242,10 @@
         "freq": 67.0,
         "meaning_1": "a living organism characterized by voluntary movement",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: a living organism characterized by voluntary movement",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a living organism characterized by voluntary movement",
@@ -9265,10 +9264,10 @@
         "freq": 67.0,
         "meaning_1": "state firmly",
         "meaning_2": "declare to be",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: state firmly",
+        "meaning_2_ko": "자동번역 필요: declare to be",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "state firmly",
@@ -9293,10 +9292,10 @@
         "freq": 67.0,
         "meaning_1": "not accept as true",
         "meaning_2": "refuse to let have",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: not accept as true",
+        "meaning_2_ko": "자동번역 필요: refuse to let have",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "not accept as true",
@@ -9319,10 +9318,10 @@
         "freq": 66.0,
         "meaning_1": "in truth (often tends to intensify)",
         "meaning_2": "(used as an interjection) an expression of surprise or skepticism or irony etc.",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: in truth (often tends to intensify)",
+        "meaning_2_ko": "자동번역 필요: (used as an interjection) an expression of surprise or skepticism or irony etc.",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "in truth (often tends to intensify)",
@@ -9349,10 +9348,10 @@
         "freq": 66.0,
         "meaning_1": "in a special manner",
         "meaning_2": "to a distinctly greater extent or degree than is common",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: in a special manner",
+        "meaning_2_ko": "자동번역 필요: to a distinctly greater extent or degree than is common",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "in a special manner",
@@ -9379,10 +9378,10 @@
         "freq": 66.0,
         "meaning_1": "spur on",
         "meaning_2": "contribute to the progress or growth of",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: spur on",
+        "meaning_2_ko": "자동번역 필요: contribute to the progress or growth of",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "spur on",
@@ -9407,10 +9406,10 @@
         "freq": 66.0,
         "meaning_1": "the quality of a person's voice",
         "meaning_2": "a steady sound without overtones",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the quality of a person's voice",
+        "meaning_2_ko": "자동번역 필요: a steady sound without overtones",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the quality of a person's voice",
@@ -9435,10 +9434,10 @@
         "freq": 66.0,
         "meaning_1": "proceed in line",
         "meaning_2": "smooth with a file",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: proceed in line",
+        "meaning_2_ko": "자동번역 필요: smooth with a file",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "proceed in line",
@@ -9461,10 +9460,10 @@
         "freq": 66.0,
         "meaning_1": "a mental process that you are not directly aware of",
         "meaning_2": "a particular course of action intended to achieve a result",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a mental process that you are not directly aware of",
+        "meaning_2_ko": "자동번역 필요: a particular course of action intended to achieve a result",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a mental process that you are not directly aware of",
@@ -9487,10 +9486,10 @@
         "freq": 65.0,
         "meaning_1": "punishment for one's actions",
         "meaning_2": "musical activity (singing or whistling etc.)",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: punishment for one's actions",
+        "meaning_2_ko": "자동번역 필요: musical activity (singing or whistling etc.)",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "punishment for one's actions",
@@ -9517,10 +9516,10 @@
         "freq": 65.0,
         "meaning_1": "an angry dispute",
         "meaning_2": "the words that are spoken",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an angry dispute",
+        "meaning_2_ko": "자동번역 필요: the words that are spoken",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an angry dispute",
@@ -9547,10 +9546,10 @@
         "freq": 65.0,
         "meaning_1": "a particular type of thing",
         "meaning_2": "a causal agent creating and controlling things in the universe",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a particular type of thing",
+        "meaning_2_ko": "자동번역 필요: a causal agent creating and controlling things in the universe",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a particular type of thing",
@@ -9577,10 +9576,10 @@
         "freq": 65.0,
         "meaning_1": "temperament or disposition",
         "meaning_2": "people viewed as members of a group",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: temperament or disposition",
+        "meaning_2_ko": "자동번역 필요: people viewed as members of a group",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "temperament or disposition",
@@ -9607,10 +9606,10 @@
         "freq": 65.0,
         "meaning_1": "declare invalid",
         "meaning_2": "refrain from doing something",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: declare invalid",
+        "meaning_2_ko": "자동번역 필요: refrain from doing something",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "declare invalid",
@@ -9637,10 +9636,10 @@
         "freq": 65.0,
         "meaning_1": "mentally disposed",
         "meaning_2": "(of especially money) immediately available",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: mentally disposed",
+        "meaning_2_ko": "자동번역 필요: (of especially money) immediately available",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "mentally disposed",
@@ -9667,10 +9666,10 @@
         "freq": 65.0,
         "meaning_1": "and nothing more",
         "meaning_2": "(used for emphasis) absolutely",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: and nothing more",
+        "meaning_2_ko": "자동번역 필요: (used for emphasis) absolutely",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "and nothing more",
@@ -9697,10 +9696,10 @@
         "freq": 65.0,
         "meaning_1": "a single organism",
         "meaning_2": "a human being; person, singular, assertive existential pronoun; pronoun, person, singular; quantifier: assertive existential",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a single organism",
+        "meaning_2_ko": "자동번역 필요: a human being; person, singular, assertive existential pronoun; pronoun, person, singular; quantifier: assertive existential",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a single organism",
@@ -9727,10 +9726,10 @@
         "freq": 65.0,
         "meaning_1": "something to be imitated",
         "meaning_2": "an occurrence of something",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: something to be imitated",
+        "meaning_2_ko": "자동번역 필요: an occurrence of something",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "something to be imitated",
@@ -9757,10 +9756,10 @@
         "freq": 65.0,
         "meaning_1": "a database containing an ordered array of items (names or topics)",
         "meaning_2": "the property possessed by a line or surface that departs from the vertical",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a database containing an ordered array of items (names or topics)",
+        "meaning_2_ko": "자동번역 필요: the property possessed by a line or surface that departs from the vertical",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a database containing an ordered array of items (names or topics)",
@@ -9787,10 +9786,10 @@
         "freq": 65.0,
         "meaning_1": "a spokesperson (as a lawyer)",
         "meaning_2": "the opening of a jar or bottle",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a spokesperson (as a lawyer)",
+        "meaning_2_ko": "자동번역 필요: the opening of a jar or bottle",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a spokesperson (as a lawyer)",
@@ -9813,10 +9812,10 @@
         "freq": 65.0,
         "meaning_1": "perform a function",
         "meaning_2": "get (something) done",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: perform a function",
+        "meaning_2_ko": "자동번역 필요: get (something) done",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "perform a function",
@@ -9839,10 +9838,10 @@
         "freq": 64.0,
         "meaning_1": "expect, believe, or suppose",
         "meaning_2": "guess correctly; solve by guessing",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: expect, believe, or suppose",
+        "meaning_2_ko": "자동번역 필요: guess correctly; solve by guessing",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "expect, believe, or suppose",
@@ -9869,10 +9868,10 @@
         "freq": 64.0,
         "meaning_1": "be relevant to",
         "meaning_2": "make reference to",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: be relevant to",
+        "meaning_2_ko": "자동번역 필요: make reference to",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "be relevant to",
@@ -9899,10 +9898,10 @@
         "freq": 64.0,
         "meaning_1": "produce laughter",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: produce laughter",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "produce laughter",
@@ -9921,10 +9920,10 @@
         "freq": 64.0,
         "meaning_1": "show and train",
         "meaning_2": "handle effectively",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: show and train",
+        "meaning_2_ko": "자동번역 필요: handle effectively",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "show and train",
@@ -9951,10 +9950,10 @@
         "freq": 64.0,
         "meaning_1": "a proportion in relation to a whole (which is usually the amount per hundred); ten percent",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: a proportion in relation to a whole (which is usually the amount per hundred); ten percent",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a proportion in relation to a whole (which is usually the amount per hundred); ten percent",
@@ -9973,10 +9972,10 @@
         "freq": 64.0,
         "meaning_1": "a thin coating or layer",
         "meaning_2": "a medium that disseminates moving pictures",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a thin coating or layer",
+        "meaning_2_ko": "자동번역 필요: a medium that disseminates moving pictures",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a thin coating or layer",
@@ -9999,10 +9998,10 @@
         "freq": 64.0,
         "meaning_1": "in a forward direction",
         "meaning_2": "forward in time or order or degree",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: in a forward direction",
+        "meaning_2_ko": "자동번역 필요: forward in time or order or degree",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "in a forward direction",
@@ -10025,10 +10024,10 @@
         "freq": 64.0,
         "meaning_1": "deem to be",
         "meaning_2": "look at attentively",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: deem to be",
+        "meaning_2_ko": "자동번역 필요: look at attentively",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "deem to be",
@@ -10051,10 +10050,10 @@
         "freq": 64.0,
         "meaning_1": "beg persistently and urgently",
         "meaning_2": "postulate positively and assertively",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: beg persistently and urgently",
+        "meaning_2_ko": "자동번역 필요: postulate positively and assertively",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "beg persistently and urgently",
@@ -10077,10 +10076,10 @@
         "freq": 63.0,
         "meaning_1": "in circumference",
         "meaning_2": "in the area or vicinity",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: in circumference",
+        "meaning_2_ko": "자동번역 필요: in the area or vicinity",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "in circumference",
@@ -10107,10 +10106,10 @@
         "freq": 63.0,
         "meaning_1": "causing dejection",
         "meaning_2": "morally rigorous and strict",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: causing dejection",
+        "meaning_2_ko": "자동번역 필요: morally rigorous and strict",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "causing dejection",
@@ -10137,10 +10136,10 @@
         "freq": 63.0,
         "meaning_1": "cause to sound",
         "meaning_2": "appear in a certain way",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: cause to sound",
+        "meaning_2_ko": "자동번역 필요: appear in a certain way",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "cause to sound",
@@ -10167,10 +10166,10 @@
         "freq": 63.0,
         "meaning_1": "manage or run",
         "meaning_2": "have care of or look after",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: manage or run",
+        "meaning_2_ko": "자동번역 필요: have care of or look after",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "manage or run",
@@ -10195,10 +10194,10 @@
         "freq": 63.0,
         "meaning_1": "a trivial lie",
         "meaning_2": "a short account of the news",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a trivial lie",
+        "meaning_2_ko": "자동번역 필요: a short account of the news",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a trivial lie",
@@ -10221,10 +10220,10 @@
         "freq": 63.0,
         "meaning_1": "hard to control",
         "meaning_2": "not easy; requiring great physical or mental effort to accomplish or comprehend or endure",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: hard to control",
+        "meaning_2_ko": "자동번역 필요: not easy; requiring great physical or mental effort to accomplish or comprehend or endure",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "hard to control",
@@ -10247,10 +10246,10 @@
         "freq": 62.0,
         "meaning_1": "a nonverbal reaction",
         "meaning_2": "the speech act of replying to a question",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a nonverbal reaction",
+        "meaning_2_ko": "자동번역 필요: the speech act of replying to a question",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a nonverbal reaction",
@@ -10277,10 +10276,10 @@
         "freq": 62.0,
         "meaning_1": "communicate",
         "meaning_2": "have in common",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: communicate",
+        "meaning_2_ko": "자동번역 필요: have in common",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "communicate",
@@ -10307,10 +10306,10 @@
         "freq": 62.0,
         "meaning_1": "of or relating to the profession of governing",
         "meaning_2": "involving or characteristic of politics or parties or politicians",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: of or relating to the profession of governing",
+        "meaning_2_ko": "자동번역 필요: involving or characteristic of politics or parties or politicians",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "of or relating to the profession of governing",
@@ -10337,10 +10336,10 @@
         "freq": 62.0,
         "meaning_1": "strong; intense",
         "meaning_2": "intense or extreme",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: strong; intense",
+        "meaning_2_ko": "자동번역 필요: intense or extreme",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "strong; intense",
@@ -10367,10 +10366,10 @@
         "freq": 62.0,
         "meaning_1": "complete a pass",
         "meaning_2": "complete or carry out",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: complete a pass",
+        "meaning_2_ko": "자동번역 필요: complete or carry out",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "complete a pass",
@@ -10397,10 +10396,10 @@
         "freq": 62.0,
         "meaning_1": "a gathering of people for pleasure",
         "meaning_2": "a person involved in legal proceedings",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a gathering of people for pleasure",
+        "meaning_2_ko": "자동번역 필요: a person involved in legal proceedings",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a gathering of people for pleasure",
@@ -10427,10 +10426,10 @@
         "freq": 62.0,
         "meaning_1": "do over",
         "meaning_2": "happen or occur again",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: do over",
+        "meaning_2_ko": "자동번역 필요: happen or occur again",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "do over",
@@ -10457,10 +10456,10 @@
         "freq": 62.0,
         "meaning_1": "power to direct or determine",
         "meaning_2": "discipline in personal and social activities",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: power to direct or determine",
+        "meaning_2_ko": "자동번역 필요: discipline in personal and social activities",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "power to direct or determine",
@@ -10487,10 +10486,10 @@
         "freq": 62.0,
         "meaning_1": "serving as a base or starting point",
         "meaning_2": "pertaining to or constituting a base or basis",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: serving as a base or starting point",
+        "meaning_2_ko": "자동번역 필요: pertaining to or constituting a base or basis",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "serving as a base or starting point",
@@ -10515,10 +10514,10 @@
         "freq": 62.0,
         "meaning_1": "not on target",
         "meaning_2": "great in degree",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: not on target",
+        "meaning_2_ko": "자동번역 필요: great in degree",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "not on target",
@@ -10541,10 +10540,10 @@
         "freq": 62.0,
         "meaning_1": "a practical method or art applied to some particular task",
         "meaning_2": "skillfulness in the command of fundamentals deriving from practice and familiarity",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a practical method or art applied to some particular task",
+        "meaning_2_ko": "자동번역 필요: skillfulness in the command of fundamentals deriving from practice and familiarity",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a practical method or art applied to some particular task",
@@ -10567,10 +10566,10 @@
         "freq": 61.0,
         "meaning_1": "utilization or exercise",
         "meaning_2": "the removal of constraints",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: utilization or exercise",
+        "meaning_2_ko": "자동번역 필요: the removal of constraints",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "utilization or exercise",
@@ -10597,10 +10596,10 @@
         "freq": 61.0,
         "meaning_1": "made recently",
         "meaning_2": "wanted by the police",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: made recently",
+        "meaning_2_ko": "자동번역 필요: wanted by the police",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "made recently",
@@ -10627,10 +10626,10 @@
         "freq": 61.0,
         "meaning_1": "on or to the point aimed at",
         "meaning_2": "to the fullest extent; to the heart",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: on or to the point aimed at",
+        "meaning_2_ko": "자동번역 필요: to the fullest extent; to the heart",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "on or to the point aimed at",
@@ -10657,10 +10656,10 @@
         "freq": 61.0,
         "meaning_1": "go under",
         "meaning_2": "fix firmly",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: go under",
+        "meaning_2_ko": "자동번역 필요: fix firmly",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "go under",
@@ -10687,10 +10686,10 @@
         "freq": 61.0,
         "meaning_1": "physical energy or intensity",
         "meaning_2": "the condition of financial success",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: physical energy or intensity",
+        "meaning_2_ko": "자동번역 필요: the condition of financial success",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "physical energy or intensity",
@@ -10717,10 +10716,10 @@
         "freq": 61.0,
         "meaning_1": "any recognized accomplishment",
         "meaning_2": "a dramatic or musical entertainment",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: any recognized accomplishment",
+        "meaning_2_ko": "자동번역 필요: a dramatic or musical entertainment",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "any recognized accomplishment",
@@ -10743,10 +10742,10 @@
         "freq": 60.0,
         "meaning_1": "in the near future",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: in the near future",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "in the near future",
@@ -10765,10 +10764,10 @@
         "freq": 60.0,
         "meaning_1": "a blank area",
         "meaning_2": "the interval between two times",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a blank area",
+        "meaning_2_ko": "자동번역 필요: the interval between two times",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a blank area",
@@ -10795,10 +10794,10 @@
         "freq": 60.0,
         "meaning_1": "without anybody else or anything else",
         "meaning_2": "without any others being included or involved",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: without anybody else or anything else",
+        "meaning_2_ko": "자동번역 필요: without any others being included or involved",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "without anybody else or anything else",
@@ -10825,10 +10824,10 @@
         "freq": 60.0,
         "meaning_1": "consume",
         "meaning_2": "comprehend",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: consume",
+        "meaning_2_ko": "자동번역 필요: comprehend",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "consume",
@@ -10855,10 +10854,10 @@
         "freq": 60.0,
         "meaning_1": "any area set aside for a particular purpose",
         "meaning_2": "a basic or essential property shared by all members of a class",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: any area set aside for a particular purpose",
+        "meaning_2_ko": "자동번역 필요: a basic or essential property shared by all members of a class",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "any area set aside for a particular purpose",
@@ -10883,10 +10882,10 @@
         "freq": 60.0,
         "meaning_1": "an undulating curve",
         "meaning_2": "something that rises rapidly",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: an undulating curve",
+        "meaning_2_ko": "자동번역 필요: something that rises rapidly",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "an undulating curve",
@@ -10909,10 +10908,10 @@
         "freq": 59.0,
         "meaning_1": "a short distance",
         "meaning_2": "the distance covered by a step",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a short distance",
+        "meaning_2_ko": "자동번역 필요: the distance covered by a step",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a short distance",
@@ -10939,10 +10938,10 @@
         "freq": 59.0,
         "meaning_1": "the sacred writings of the Christian religions",
         "meaning_2": "a major division of a long written composition",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the sacred writings of the Christian religions",
+        "meaning_2_ko": "자동번역 필요: a major division of a long written composition",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the sacred writings of the Christian religions",
@@ -10969,10 +10968,10 @@
         "freq": 59.0,
         "meaning_1": "the management of someone or something",
         "meaning_2": "a manner of dealing with something artistically",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the management of someone or something",
+        "meaning_2_ko": "자동번역 필요: a manner of dealing with something artistically",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the management of someone or something",
@@ -10999,10 +10998,10 @@
         "freq": 59.0,
         "meaning_1": "notice or perceive",
         "meaning_2": "make or write a comment on",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: notice or perceive",
+        "meaning_2_ko": "자동번역 필요: make or write a comment on",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "notice or perceive",
@@ -11029,10 +11028,10 @@
         "freq": 59.0,
         "meaning_1": "a very small distance or space",
         "meaning_2": "filamentous hairlike growth on a plant",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a very small distance or space",
+        "meaning_2_ko": "자동번역 필요: filamentous hairlike growth on a plant",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a very small distance or space",
@@ -11055,10 +11054,10 @@
         "freq": 59.0,
         "meaning_1": "utter a sudden loud cry",
         "meaning_2": "use foul or abusive language towards",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: utter a sudden loud cry",
+        "meaning_2_ko": "자동번역 필요: use foul or abusive language towards",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "utter a sudden loud cry",
@@ -11081,10 +11080,10 @@
         "freq": 58.0,
         "meaning_1": "nonstandard",
         "meaning_2": "serious or severe",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: nonstandard",
+        "meaning_2_ko": "자동번역 필요: serious or severe",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "nonstandard",
@@ -11111,10 +11110,10 @@
         "freq": 58.0,
         "meaning_1": "be absent",
         "meaning_2": "be without",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: be absent",
+        "meaning_2_ko": "자동번역 필요: be without",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "be absent",
@@ -11141,10 +11140,10 @@
         "freq": 58.0,
         "meaning_1": "the gradual process of acquiring knowledge",
         "meaning_2": "knowledge acquired by learning and instruction",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the gradual process of acquiring knowledge",
+        "meaning_2_ko": "자동번역 필요: knowledge acquired by learning and instruction",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the gradual process of acquiring knowledge",
@@ -11171,10 +11170,10 @@
         "freq": 58.0,
         "meaning_1": "mark with a scar",
         "meaning_2": "notice or perceive",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: mark with a scar",
+        "meaning_2_ko": "자동번역 필요: notice or perceive",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "mark with a scar",
@@ -11201,10 +11200,10 @@
         "freq": 58.0,
         "meaning_1": "the period of finest development, happiness, or beauty",
         "meaning_2": "the warmest season of the year; in the Northern Hemisphere it extends from the summer solstice to the autumnal equinox",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the period of finest development, happiness, or beauty",
+        "meaning_2_ko": "자동번역 필요: the warmest season of the year; in the Northern Hemisphere it extends from the summer solstice to the autumnal equinox",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the period of finest development, happiness, or beauty",
@@ -11231,10 +11230,10 @@
         "freq": 58.0,
         "meaning_1": "characterized by violence or bloodshed",
         "meaning_2": "(especially of the face) reddened or suffused with or as if with blood from emotion or exertion",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: characterized by violence or bloodshed",
+        "meaning_2_ko": "자동번역 필요: (especially of the face) reddened or suffused with or as if with blood from emotion or exertion",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "characterized by violence or bloodshed",
@@ -11261,10 +11260,10 @@
         "freq": 58.0,
         "meaning_1": "be asleep",
         "meaning_2": "be able to accommodate for sleeping",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: be asleep",
+        "meaning_2_ko": "자동번역 필요: be able to accommodate for sleeping",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "be asleep",
@@ -11291,10 +11290,10 @@
         "freq": 58.0,
         "meaning_1": "pick out, select, or choose from a number of alternatives",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: pick out, select, or choose from a number of alternatives",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "pick out, select, or choose from a number of alternatives",
@@ -11313,10 +11312,10 @@
         "freq": 58.0,
         "meaning_1": "put something back where it belongs",
         "meaning_2": "take the place or move into the position of",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: put something back where it belongs",
+        "meaning_2_ko": "자동번역 필요: take the place or move into the position of",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "put something back where it belongs",
@@ -11343,10 +11342,10 @@
         "freq": 58.0,
         "meaning_1": "what something is used for",
         "meaning_2": "an actor's portrayal of someone in a play",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: what something is used for",
+        "meaning_2_ko": "자동번역 필요: an actor's portrayal of someone in a play",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "what something is used for",
@@ -11373,10 +11372,10 @@
         "freq": 58.0,
         "meaning_1": "hit a fly",
         "meaning_2": "run away quickly",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: hit a fly",
+        "meaning_2_ko": "자동번역 필요: run away quickly",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "hit a fly",
@@ -11399,10 +11398,10 @@
         "freq": 57.0,
         "meaning_1": "by chance",
         "meaning_2": null,
-        "meaning_1_ko": null,
+        "meaning_1_ko": "자동번역 필요: by chance",
         "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "by chance",
@@ -11421,10 +11420,10 @@
         "freq": 57.0,
         "meaning_1": "on the contrary",
         "meaning_2": "in place of, or as an alternative to",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: on the contrary",
+        "meaning_2_ko": "자동번역 필요: in place of, or as an alternative to",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "on the contrary",
@@ -11451,10 +11450,10 @@
         "freq": 57.0,
         "meaning_1": "immediately",
         "meaning_2": "precisely, exactly",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: immediately",
+        "meaning_2_ko": "자동번역 필요: precisely, exactly",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "immediately",
@@ -11481,10 +11480,10 @@
         "freq": 57.0,
         "meaning_1": "(language) communication by word of mouth",
         "meaning_2": "the mental faculty or power of vocal communication",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: (language) communication by word of mouth",
+        "meaning_2_ko": "자동번역 필요: the mental faculty or power of vocal communication",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "(language) communication by word of mouth",
@@ -11511,10 +11510,10 @@
         "freq": 57.0,
         "meaning_1": "a body of rules followed by an assembly",
         "meaning_2": "a degree in a continuum of size or quantity",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: a body of rules followed by an assembly",
+        "meaning_2_ko": "자동번역 필요: a degree in a continuum of size or quantity",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "a body of rules followed by an assembly",
@@ -11541,10 +11540,10 @@
         "freq": 57.0,
         "meaning_1": "the rays of the sun",
         "meaning_2": "any star around which a planetary system revolves",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the rays of the sun",
+        "meaning_2_ko": "자동번역 필요: any star around which a planetary system revolves",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the rays of the sun",
@@ -11571,10 +11570,10 @@
         "freq": 57.0,
         "meaning_1": "the focus of cognitions or feelings",
         "meaning_2": "(grammar) a constituent that is acted upon",
-        "meaning_1_ko": null,
-        "meaning_2_ko": null,
-        "ko_translation_source": null,
-        "ko_translation_is_machine": null,
+        "meaning_1_ko": "자동번역 필요: the focus of cognitions or feelings",
+        "meaning_2_ko": "자동번역 필요: (grammar) a constituent that is acted upon",
+        "ko_translation_source": "fallback_stub",
+        "ko_translation_is_machine": true,
         "examples_by_meaning": [
           {
             "meaning": "the focus of cognitions or feelings",

@@ -165,6 +165,17 @@ def ensure_tables(conn: sqlite3.Connection) -> None:
         """
     )
 
+    for column_name, column_type in [
+        ("meaning_1_ko", "TEXT"),
+        ("meaning_2_ko", "TEXT"),
+        ("ko_translation_source", "TEXT"),
+        ("ko_translation_is_machine", "INTEGER"),
+    ]:
+        try:
+            conn.execute(f"ALTER TABLE level_recommendations ADD COLUMN {column_name} {column_type}")
+        except sqlite3.OperationalError:
+            pass
+
 
 def build(conn: sqlite3.Connection, per_level: int) -> tuple[list[dict], dict[str, list[dict]]]:
     candidates = fetch_candidates(conn)
@@ -238,8 +249,10 @@ def write_outputs(
                 """
                 INSERT INTO level_recommendations(
                   level, rank_in_level, word_id, lemma, pos, freq,
-                  meaning_1, meaning_2, examples_json, mapping_version
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                  meaning_1, meaning_2, meaning_1_ko, meaning_2_ko,
+                  ko_translation_source, ko_translation_is_machine,
+                  examples_json, mapping_version
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     level,
@@ -250,6 +263,10 @@ def write_outputs(
                     row["freq"],
                     row["meaning_1"],
                     row["meaning_2"],
+                    None,
+                    None,
+                    None,
+                    None,
                     json.dumps(row["examples_by_meaning"], ensure_ascii=False),
                     MAPPING_VERSION,
                 ),

@@ -16,8 +16,8 @@ function render(level, data) {
 
     return `<li>
       <strong>${w.lemma}</strong> <small>(${w.pos || "unknown"})</small>
-      <div>• ${w.meaning_1 || "-"}</div>
-      ${w.meaning_2 ? `<div>• ${w.meaning_2}</div>` : ""}
+      <div>• ${w.meaning_1 || "-"}${w.meaning_1_ko ? ` <em>(${w.meaning_1_ko})</em>` : ""}</div>
+      ${w.meaning_2 ? `<div>• ${w.meaning_2}${w.meaning_2_ko ? ` <em>(${w.meaning_2_ko})</em>` : ""}</div>` : ""}
       <ul>${examples}</ul>
     </li>`;
   }).join("");

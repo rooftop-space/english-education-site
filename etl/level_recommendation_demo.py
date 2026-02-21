@@ -22,7 +22,7 @@ def main() -> None:
     cur = conn.cursor()
     cur.execute(
         """
-        SELECT rank_in_level, lemma, pos, meaning_1, meaning_2, examples_json
+        SELECT rank_in_level, lemma, pos, meaning_1, meaning_2, meaning_1_ko, meaning_2_ko, examples_json
         FROM level_recommendations
         WHERE level = ?
         ORDER BY rank_in_level
@@ -37,12 +37,12 @@ def main() -> None:
         return
 
     print(f"LEVEL: {args.level} (top {len(rows)})")
-    for rank, lemma, pos, m1, m2, examples_json in rows:
+    for rank, lemma, pos, m1, m2, m1_ko, m2_ko, examples_json in rows:
         print(f"\n[{rank}] {lemma} ({pos or 'unknown'})")
         if m1:
-            print(f" - meaning1: {m1}")
+            print(f" - meaning1: {m1}" + (f" ({m1_ko})" if m1_ko else ""))
         if m2:
-            print(f" - meaning2: {m2}")
+            print(f" - meaning2: {m2}" + (f" ({m2_ko})" if m2_ko else ""))
 
         blocks = json.loads(examples_json)
         seen = set()
