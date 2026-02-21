@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Loop MVP</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>English Loop MVP</h1>
+      <p>가입 → 학습 → 복습 → 구독 루프 기반 최소 기능 구현</p>
+      <p id="current-user"></p>
+    </header>
+
+    <main>
+      <section id="auth" class="card">
+        <h2>0) 가입/로그인</h2>
+        <div class="auth-grid">
+          <div>
+            <h3>회원가입</h3>
+            <input id="signup-email" type="email" placeholder="email@example.com" />
+            <input id="signup-password" type="password" placeholder="비밀번호(6자 이상)" />
+            <label>권한(role)</label>
+            <select id="signup-role">
+              <option value="learner">learner</option>
+              <option value="admin">admin</option>
+            </select>
+            <button id="signup-btn">가입</button>
+          </div>
+          <div>
+            <h3>로그인</h3>
+            <input id="login-email" type="email" placeholder="email@example.com" />
+            <input id="login-password" type="password" placeholder="비밀번호" />
+            <div class="row">
+              <button id="login-btn">로그인</button>
+              <button id="logout-btn">로그아웃</button>
+            </div>
+            <p class="hint">초기 admin 계정: admin@english-loop.local / Admin1234</p>
+          </div>
+        </div>
+        <p id="auth-message" class="msg"></p>
+      </section>
+
+      <section id="onboarding" class="card">
+        <h2>1) 온보딩 진단</h2>
+        <form id="diag-form"></form>
+        <button id="diag-submit">진단 제출</button>
+        <p id="diag-result"></p>
+      </section>
+
+      <section id="learning" class="card">
+        <h2>2) 학습 세션</h2>
+        <div id="learning-card"></div>
+        <div class="row">
+          <button id="btn-again">다시 보기</button>
+          <button id="btn-good">알겠어요</button>
+          <button id="btn-next">다음 카드</button>
+        </div>
+      </section>
+
+      <section id="review" class="card">
+        <h2>3) SRS 복습 큐</h2>
+        <p id="review-summary"></p>
+        <ul id="review-list"></ul>
+      </section>
+
+      <section id="progress" class="card">
+        <h2>4) 진도보드</h2>
+        <div id="progress-board"></div>
+      </section>
+
+      <section id="discover" class="card">
+        <h2>5) 검색/추천 기본</h2>
+        <input id="search-input" placeholder="예: travel" />
+        <button id="search-btn">검색</button>
+        <ul id="search-results"></ul>
+      </section>
+
+      <section id="subscribe" class="card">
+        <h2>6) 구독 퍼널</h2>
+        <p>무료 체험(7일) → 라이트 → 프로 전환</p>
+        <div class="row">
+          <button data-plan="trial" class="plan-btn">무료 체험 시작</button>
+          <button data-plan="light" class="plan-btn">라이트 구독</button>
+          <button data-plan="pro" class="plan-btn">프로 구독</button>
+        </div>
+        <p id="subscribe-state"></p>
+      </section>
+
+      <section id="admin" class="card">
+        <h2>7) 관리자 기본</h2>
+        <p id="admin-guard"></p>
+        <div id="admin-controls">
+          <div class="row">
+            <input id="admin-title" placeholder="레슨 제목" />
+            <input id="admin-tag" placeholder="태그" />
+          </div>
+          <textarea id="admin-content" placeholder="카드 문장"></textarea>
+          <button id="admin-add">레슨 추가</button>
+        </div>
+        <h3>감사로그(audit log)</h3>
+        <ul id="audit-log"></ul>
+      </section>
+    </main>
+
+    <!-- 카카오 광고 코드: 기존 코드 발견 시 반드시 유지할 것 -->
+    <div id="kakao-ad-preserve-slot" data-preserve="true"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
