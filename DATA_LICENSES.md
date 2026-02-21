@@ -23,9 +23,11 @@
 - `source_ref`: 원문 레퍼런스(예: 원본 id/URL/키)
 
 ## 4) 실제 대용량 데이터 배치 위치
-- OEWN 원본: `data/raw/oewn/` (권장)
-- Tatoeba 원본: `data/raw/tatoeba/` (권장)
+- OEWN 원본: `data/raw/real/oewn/`
+  - 사용본: `x-englishwordnet/json` 저장소의 `oewn-2025.json.zip` (OEWN CC BY 4.0)
+- Tatoeba 원본: `data/raw/real/tatoeba/`
+  - 사용본: Tatoeba 공식 exports의 `sentences.tar.bz2` (문장 라이선스 CC BY 2.0 FR)
 - 정규화/중간 산출물: `data/processed/`
 
-샘플 파일은 `data/raw/sample_oewn.jsonl`, `data/raw/sample_tatoeba.tsv`에 포함되어 있으며,
-실데이터 투입 시 동일 스키마 컬럼을 맞추면 ingest 스크립트 재사용 가능.
+샘플 파일(`data/raw/sample_oewn.jsonl`, `data/raw/sample_tatoeba.tsv`)은 개발/테스트용이며,
+실데이터 적재 시에는 위 real 경로의 원본/가공본만 사용.

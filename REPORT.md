@@ -159,3 +159,83 @@ rm -f data/processed/dictionary.db
 ## 8) 호환성/영향
 - 기존 프론트 앱(`index.html`, `styles.css`, `app.js`) 미수정
 - 데이터 파이프라인 파일만 변경/추가되어 기존 앱 동작 영향 없음
+
+---
+
+## 9) 실데이터 증분 구축 로그 (2026-02-21)
+요청사항에 따라 실데이터 기준으로 `data/raw/real/` 경로를 정리하고, `etl/run_mvp_300mb.sh`로 1차→2차 증분 적재를 수행함.
+
+### 9-1. 원본 수집/정리
+- OEWN: `data/raw/real/oewn/x-englishwordnet-json/` (합법 미러: GitHub `x-englishwordnet/json`)
+  - 사용 파일: `data/raw/real/oewn/oewn.json` (zip 해제본)
+  - ingest용 변환본: `data/raw/real/oewn/oewn_2025_en.jsonl` (160,502 entries)
+- Tatoeba: `data/raw/real/tatoeba/sentences.tar.bz2` (공식 exports)
+  - ingest용 추출본: `data/raw/real/tatoeba/sentences_en.tsv` (2,014,479 rows, lang=en)
+
+### 9-2. 1차 적재 (MVP 300MB 목표 배치)
+실행:
+```bash
+rm -f data/processed/dictionary.db
+DB_PATH=data/processed/dictionary.db \
+OEWN_INPUT=data/raw/real/oewn/oewn_2025_en.jsonl \
+TATOEBA_INPUT=data/raw/real/tatoeba/sentences_en.tsv \
+OEWN_MAX_ROWS=120000 \
+TATOEBA_MAX_ROWS=400000 \
+TATOEBA_MIN_TOKENS=4 \
+TATOEBA_MAX_TOKENS=18 \
+TOP_WORD_CUTOFF=120000 \
+./etl/run_mvp_300mb.sh
+```
+
+결과 (`logs/mvp_stage1.log`):
+- words: 120,000
+- senses: 165,861
+- examples: 400,000
+- sense_examples: 2,039,794
+- word_forms: 0
+- DB_SIZE_BYTES: 349,003,776
+- DB_SIZE_MB: 332.84
+
+### 9-3. 2차 증분 적재
+실행:
+```bash
+DB_PATH=data/processed/dictionary.db \
+OEWN_INPUT=data/raw/real/oewn/oewn_2025_en.jsonl \
+TATOEBA_INPUT=data/raw/real/tatoeba/sentences_en.tsv \
+OEWN_MAX_ROWS=150000 \
+TATOEBA_MAX_ROWS=600000 \
+TATOEBA_MIN_TOKENS=4 \
+TATOEBA_MAX_TOKENS=18 \
+TOP_WORD_CUTOFF=150000 \
+./etl/run_mvp_300mb.sh
+```
+
+결과 (`logs/mvp_stage2.log`):
+- words: 150,000
+- senses: 200,222
+- examples: 603,565
+- sense_examples: 2,656,714
+- word_forms: 0
+- DB_SIZE_BYTES: 482,541,568
+- DB_SIZE_MB: 460.19
+
+### 9-4. 상태 요약
+- 1차에서 이미 300MB 목표(약 333MB)를 달성.
+- 2차 증분 후 현재 DB는 약 460MB.
+- 현재 산출물 기준 최대치(현 배치 파라미터 내): `data/processed/dictionary.db` 460.19MB.
+
+### 9-5. 다음 배치 제안 파라미터
+현재 300MB를 초과했으므로, 운영 선택지는 2가지:
+1) **300MB 근접 유지**: 1차 파라미터(120k/400k)를 기준 배포본으로 사용
+2) **확장본 계속 증분**: 아래처럼 상향 실행
+```bash
+DB_PATH=data/processed/dictionary.db \
+OEWN_INPUT=data/raw/real/oewn/oewn_2025_en.jsonl \
+TATOEBA_INPUT=data/raw/real/tatoeba/sentences_en.tsv \
+OEWN_MAX_ROWS=160000 \
+TATOEBA_MAX_ROWS=900000 \
+TOP_WORD_CUTOFF=160000 \
+TATOEBA_MIN_TOKENS=4 \
+TATOEBA_MAX_TOKENS=20 \
+./etl/run_mvp_300mb.sh
+```

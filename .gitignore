@@ -1,0 +1,7 @@
+# Large generated/local artifacts
+/data/raw/real/
+/data/processed/*.db
+
+# Optional runtime logs
+*.sqlite-shm
+*.sqlite-wal
