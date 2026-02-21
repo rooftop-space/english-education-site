@@ -239,3 +239,100 @@ TATOEBA_MIN_TOKENS=4 \
 TATOEBA_MAX_TOKENS=20 \
 ./etl/run_mvp_300mb.sh
 ```
+
+---
+
+## 10) 레벨별 추천 단어/의미/예문 반영 (2026-02-21 추가)
+
+요구사항 대응으로 `data/processed/dictionary.db`를 기반으로 레벨 정규화 + 추천 세트를 생성하고 앱 연동용 산출물을 추가함.
+
+### 10-1) 레벨 분포 점검 및 정규화 규칙
+현황 점검 SQL:
+```sql
+SELECT COALESCE(level,'(null)') AS level, COUNT(*) FROM words GROUP BY level;
+SELECT COALESCE(level,'(null)') AS level, COUNT(*) FROM examples GROUP BY level;
+```
+결과: `words.level`, `examples.level` 모두 실데이터 기준 대부분 `NULL`.
+
+정규화 정책:
+- CEFR 우선 적용(A1~C2)
+- 내부 level 부재 시 `freq` 순위 백분위로 매핑
+- 매핑 버전: `freq_percentile_v1`
+
+매핑 규칙:
+- A1: 상위 5%
+- A2: 5~15%
+- B1: 15~35%
+- B2: 35~60%
+- C1: 60~80%
+- C2: 80~100%
+
+규칙/결과 저장 위치:
+- `level_recommendation_mapping_rules`
+- `word_level_norm` (word_id별 CEFR 정규화 결과)
+
+### 10-2) 추천 세트 생성 방식
+신규 스크립트:
+- `etl/build_level_recommendations.py`
+
+로직:
+1. sense+example가 연결된 단어만 후보로 수집
+2. `freq` 내림차순 랭크 후 CEFR 레벨 매핑
+3. 레벨별 상위 N개 선별(`--per-level`, 기본 200)
+4. 각 단어 대표 meaning 1~2개 선정
+   - 기준: sense별 연결 예문 수 DESC, 정의 길이 ASC
+5. meaning당 예문 1~3개 선정
+   - 기준: 문장 길이 중앙값(약 70 chars) 근접 순
+
+### 10-3) 앱 사용 가능한 산출물
+1) sqlite materialized table
+- `level_recommendations`
+  - `level, rank_in_level, lemma, pos, freq, meaning_1, meaning_2, examples_json`
+2) sqlite view
+- `v_level_recommendations`
+3) JSON export
+- `data/processed/level_recommendations.json`
+
+### 10-4) 레벨별 추천 수량 검증
+검증 SQL:
+```sql
+SELECT level, COUNT(*) AS cnt
+FROM level_recommendations
+GROUP BY level
+ORDER BY level;
+```
+결과:
+- A1: 200
+- A2: 200
+- B1: 200
+- B2: 200
+- C1: 200
+- C2: 200
+
+정규화 대상(후보) 분포:
+```sql
+SELECT cefr_level, COUNT(*) FROM word_level_norm GROUP BY cefr_level ORDER BY cefr_level;
+```
+결과:
+- A1: 355
+- A2: 708
+- B1: 1416
+- B2: 1771
+- C1: 1416
+- C2: 1417
+
+### 10-5) 연동 포인트(데모)
+CLI 데모 스크립트:
+- `etl/level_recommendation_demo.py`
+```bash
+python3 etl/level_recommendation_demo.py --db data/processed/dictionary.db --level A1 --limit 5
+```
+
+브라우저 데모 화면:
+- `level-demo.html` + `level-demo.js`
+- 레벨 선택 시 `data/processed/level_recommendations.json`에서 추천 단어+뜻+예문 표시
+
+### 10-6) 무결성/배치 운영
+- 기존 `words/senses/examples/sense_examples` 원본 데이터는 변경하지 않음
+- 결과는 별도 테이블/뷰/JSON으로 생성하여 무결성 유지
+- `etl/build_level_recommendations.py`를 배치 반복 실행 가능(재생성 방식)
