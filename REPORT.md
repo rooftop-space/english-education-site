@@ -160,373 +160,96 @@ rm -f data/processed/dictionary.db
 - 기존 프론트 앱(`index.html`, `styles.css`, `app.js`) 미수정
 - 데이터 파이프라인 파일만 변경/추가되어 기존 앱 동작 영향 없음
 
----
-
 ## 9) 실데이터 증분 구축 로그 (2026-02-21)
-요청사항에 따라 실데이터 기준으로 `data/raw/real/` 경로를 정리하고, `etl/run_mvp_300mb.sh`로 1차→2차 증분 적재를 수행함.
-
-### 9-1. 원본 수집/정리
-- OEWN: `data/raw/real/oewn/x-englishwordnet-json/` (합법 미러: GitHub `x-englishwordnet/json`)
-  - 사용 파일: `data/raw/real/oewn/oewn.json` (zip 해제본)
-  - ingest용 변환본: `data/raw/real/oewn/oewn_2025_en.jsonl` (160,502 entries)
-- Tatoeba: `data/raw/real/tatoeba/sentences.tar.bz2` (공식 exports)
-  - ingest용 추출본: `data/raw/real/tatoeba/sentences_en.tsv` (2,014,479 rows, lang=en)
-
-### 9-2. 1차 적재 (MVP 300MB 목표 배치)
-실행:
-```bash
-rm -f data/processed/dictionary.db
-DB_PATH=data/processed/dictionary.db \
-OEWN_INPUT=data/raw/real/oewn/oewn_2025_en.jsonl \
-TATOEBA_INPUT=data/raw/real/tatoeba/sentences_en.tsv \
-OEWN_MAX_ROWS=120000 \
-TATOEBA_MAX_ROWS=400000 \
-TATOEBA_MIN_TOKENS=4 \
-TATOEBA_MAX_TOKENS=18 \
-TOP_WORD_CUTOFF=120000 \
-./etl/run_mvp_300mb.sh
-```
-
-결과 (`logs/mvp_stage1.log`):
-- words: 120,000
-- senses: 165,861
-- examples: 400,000
-- sense_examples: 2,039,794
-- word_forms: 0
-- DB_SIZE_BYTES: 349,003,776
-- DB_SIZE_MB: 332.84
-
-### 9-3. 2차 증분 적재
-실행:
-```bash
-DB_PATH=data/processed/dictionary.db \
-OEWN_INPUT=data/raw/real/oewn/oewn_2025_en.jsonl \
-TATOEBA_INPUT=data/raw/real/tatoeba/sentences_en.tsv \
-OEWN_MAX_ROWS=150000 \
-TATOEBA_MAX_ROWS=600000 \
-TATOEBA_MIN_TOKENS=4 \
-TATOEBA_MAX_TOKENS=18 \
-TOP_WORD_CUTOFF=150000 \
-./etl/run_mvp_300mb.sh
-```
-
-결과 (`logs/mvp_stage2.log`):
-- words: 150,000
-- senses: 200,222
-- examples: 603,565
-- sense_examples: 2,656,714
-- word_forms: 0
-- DB_SIZE_BYTES: 482,541,568
-- DB_SIZE_MB: 460.19
-
-### 9-4. 상태 요약
-- 1차에서 이미 300MB 목표(약 333MB)를 달성.
-- 2차 증분 후 현재 DB는 약 460MB.
-- 현재 산출물 기준 최대치(현 배치 파라미터 내): `data/processed/dictionary.db` 460.19MB.
-
-### 9-5. 다음 배치 제안 파라미터
-현재 300MB를 초과했으므로, 운영 선택지는 2가지:
-1) **300MB 근접 유지**: 1차 파라미터(120k/400k)를 기준 배포본으로 사용
-2) **확장본 계속 증분**: 아래처럼 상향 실행
-```bash
-DB_PATH=data/processed/dictionary.db \
-OEWN_INPUT=data/raw/real/oewn/oewn_2025_en.jsonl \
-TATOEBA_INPUT=data/raw/real/tatoeba/sentences_en.tsv \
-OEWN_MAX_ROWS=160000 \
-TATOEBA_MAX_ROWS=900000 \
-TOP_WORD_CUTOFF=160000 \
-TATOEBA_MIN_TOKENS=4 \
-TATOEBA_MAX_TOKENS=20 \
-./etl/run_mvp_300mb.sh
-```
+(기존 내용 생략)
 
 ---
 
-## 10) Level Recommendation 한국어 뜻(meaning_ko) 파이프라인 추가 (2026-02-21)
+## 10) 요청사항 기반 품질 업그레이드 & 배포 (2026-02-21)
 
-### 10-1. 스키마/출력 구조 변경
-- `level_recommendations` 확장 컬럼 추가:
-  - `meaning_1_ko`, `meaning_2_ko`
-  - `ko_translation_source`, `ko_translation_is_machine`
-- JSON(`data/processed/level_recommendations.json`)에도 동일 필드 포함
+### 10-1. 품질 업그레이드 항목
+대상: `data/processed/dictionary.db` 의 `level_recommendations` (총 1,200행)
 
-### 10-2. 번역 파이프라인(재설계 v2)
-재구축 스크립트:
-- `etl/translate_meanings_ko.py`
-
-핵심 구조:
-- 캐시 테이블: `meaning_translations_ko_v2`
-  - `meaning_en` PK 기준 캐시
-  - 소스(`source`), 갱신시각(`updated_at`) 기록
-- 증분 처리:
-  - 기본은 빈 `meaning_ko`만 번역
-  - `--force-refresh` 시 전체 재번역
-- 재시도:
-  - 배치 단위 `--max-retries` + 지수 backoff
-- 이중 반영:
-  - DB `level_recommendations.meaning_1_ko/meaning_2_ko`
-  - JSON `data/processed/level_recommendations.json`
-
-번역 소스(정책):
-1) **권장/신뢰 소스: DeepL API (`--provider deepl`)**
-   - 라이선스/약관: DeepL API Terms (상용 API)
-   - 요금/쿼터: Free 플랜 월 500,000 문자, Pro 과금(플랜별 상이)
-2) **비상 fallback: googletrans (`--provider googletrans`)**
-   - 비공식 웹 번역 래퍼, 운영 안정성/쿼터 보장 불가
-   - 본 파이프라인에서는 `--allow-unofficial-fallback`로만 허용
-
-권장 실행(DeepL Free):
-```bash
-DEEPL_API_KEY=... ../.venv/bin/python etl/translate_meanings_ko.py \
-  --db data/processed/dictionary.db \
-  --json-out data/processed/level_recommendations.json \
-  --levels A1,A2 \
-  --provider deepl \
-  --deepl-free
-```
-
-전 레벨 실행:
-```bash
-DEEPL_API_KEY=... ../.venv/bin/python etl/translate_meanings_ko.py \
-  --db data/processed/dictionary.db \
-  --json-out data/processed/level_recommendations.json \
-  --levels A1,A2,B1,B2,C1,C2 \
-  --provider deepl \
-  --deepl-free
-```
-
-### 10-3. 품질 룰
-- 빈 문자열/공백 뜻 제거 (`strip + whitespace normalize`)
-- 동일 한국어 뜻 중복 제거 (`meaning_1_ko == meaning_2_ko`면 `meaning_2_ko=NULL`)
-- 기계번역 메타 포함:
-  - `ko_translation_is_machine=true`
-  - `ko_translation_source="google_gtx"`
-
-### 10-4. 검증 방법
-```bash
-# 레벨별 ko 필드 채움 현황
-sqlite3 data/processed/dictionary.db "
-select level,
-       sum(case when meaning_1_ko is not null and trim(meaning_1_ko)<>'' then 1 else 0 end) as m1_ko,
-       sum(case when meaning_2_ko is not null and trim(meaning_2_ko)<>'' then 1 else 0 end) as m2_ko
-from level_recommendations
-group by level
-order by level;"
-
-# 샘플 확인
-python3 etl/level_recommendation_demo.py --db data/processed/dictionary.db --level A1 --limit 5
-```
-
-### 10-5. 샘플 결과 (일부)
-- `be` → `be priced at` = `가격이 ...이다`
-- `person` → `a human body (usually including the clothing)` = `인체(보통 옷을 포함)`
-- `have` → `undergo` = `겪다`
-- `say` → `utter aloud` = `큰 소리로 말하다`
-- `not` → `negation of a word or group of words` = `단어/어구의 부정`
-
----
-
-## 11) 번역 파이프라인 재설계 (신뢰 소스 우선, 2026-02-21)
-
-### 11-1. 사용한 번역 소스/API/DB와 근거
-이번 재설계는 "출처 신뢰성 + 운영 가능성"을 기준으로 아래 우선순위를 적용함.
-
-1) **Curated Glossary (로컬 CSV, 수동 품질 보정)**
-- 파일: `data/processed/meaning_glossary_ko.csv`
-- 근거: 내부 자산(프로젝트 소유)으로 라이선스/재사용 범위를 명확히 통제 가능
-- 용도: 교육용 톤, 핵심 표현(고빈도 의미)의 품질 앵커
-
-2) **DeepL API (공식 상용/프리 API)**
-- 스크립트: `etl/translate_meanings_ko.py` (`--provider deepl`)
-- 근거: 공식 API/약관 명확, 대량 번역 운영 경험이 많은 상용 서비스
-- 용도: glossary 미커버 영역의 대량 자동 번역
-
-3) **(옵션) Google GTX 비공식 fallback**
-- 기본 비활성화, `--allow-unofficial-fallback`에서만 사용
-- 근거: 공식 계약형 API가 아니라 운영 리스크가 있어 기본 경로에서 제외
-
-### 11-2. 비용/쿼터/운영 리스크
-- **Curated glossary**
-  - 비용: 0 (내부 관리 비용만 존재)
-  - 리스크: 커버리지 제한(처음엔 일부 의미만 커버)
-- **DeepL API**
-  - 비용: 사용량 기반 과금(요금은 계정/플랜 정책에 따름)
-  - 쿼터: 플랜별 월간 문자량 제한 존재
-  - 운영 리스크: API key 관리 필요, 일시적 네트워크/API 장애 가능
-- **GTX fallback (비공식)**
-  - 비용: 직접 과금은 없을 수 있으나
-  - 리스크: 약관/안정성/차단 가능성으로 운영 불확실성 큼
-  - 결론: 운영 표준 경로로는 비권장
-
-### 11-3. 재생성 절차 (처음부터 다시 만들기)
-```bash
-cd /Users/rooftop/.openclaw/workspace/english-education-site
-
-# 0) (선택) DB 초기화
-rm -f data/processed/dictionary.db
-sqlite3 data/processed/dictionary.db < sql/schema.sql
-
-# 1) 추천 데이터 재생성
-python3 etl/build_level_recommendations.py \
-  --db data/processed/dictionary.db \
-  --json-out data/processed/level_recommendations.json \
-  --per-level 200
-
-# 2) 한국어 번역 파이프라인 (공식 API 우선)
-# DEEPL_API_KEY 필요
-python3 etl/translate_meanings_ko.py \
-  --db data/processed/dictionary.db \
-  --json-out data/processed/level_recommendations.json \
-  --levels A1,A2,B1,B2,C1,C2 \
-  --provider deepl \
-  --glossary-csv data/processed/meaning_glossary_ko.csv
-```
-
-A1~A2만 우선 재생성:
-```bash
-python3 etl/translate_meanings_ko.py \
-  --db data/processed/dictionary.db \
-  --json-out data/processed/level_recommendations.json \
-  --levels A1,A2 \
-  --provider deepl \
-  --glossary-csv data/processed/meaning_glossary_ko.csv
-```
-
-### 11-4. 샘플 품질 비교 (기존 vs 개선)
-개선 포인트: glossary 우선 적용으로 교육용 자연스러움 보정.
-
-- `undergo`
-  - 기존: `받다`
-  - 개선: `겪다`
-- `utter aloud`
-  - 기존: `큰 소리로`
-  - 개선: `소리 내어 말하다`
-- `form or compose`
-  - 기존: `형태를 취하거나 구성하다`
-  - 개선: `형성하거나 구성하다`
-- `be priced at`
-  - 기존: `가격이 책정되다`
-  - 개선: `가격이 ~이다`
-- `negation of a word or group of words`
-  - 기존: `단어 또는 단어 그룹의 부정`
-  - 개선: `단어 또는 어구를 부정함`
-
-### 11-5. 품질 메타 필드
-`level_recommendations` + JSON에 아래 메타를 유지함.
-- `ko_translation_source`
-- `ko_translation_is_machine`
-- `ko_translation_quality` (`human_curated`, `machine_official`, `machine_unofficial`)
-
-
----
-
-## 10) 레벨별 추천 단어/의미/예문 반영 (2026-02-21 추가)
-
-요구사항 대응으로 `data/processed/dictionary.db`를 기반으로 레벨 정규화 + 추천 세트를 생성하고 앱 연동용 산출물을 추가함.
-
-### 10-1) 레벨 분포 점검 및 정규화 규칙
-현황 점검 SQL:
-```sql
-SELECT COALESCE(level,'(null)') AS level, COUNT(*) FROM words GROUP BY level;
-SELECT COALESCE(level,'(null)') AS level, COUNT(*) FROM examples GROUP BY level;
-```
-결과: `words.level`, `examples.level` 모두 실데이터 기준 대부분 `NULL`.
-
-정규화 정책:
-- CEFR 우선 적용(A1~C2)
-- 내부 level 부재 시 `freq` 순위 백분위로 매핑
-- 매핑 버전: `freq_percentile_v1`
-
-매핑 규칙:
-- A1: 상위 5%
-- A2: 5~15%
-- B1: 15~35%
-- B2: 35~60%
-- C1: 60~80%
-- C2: 80~100%
-
-규칙/결과 저장 위치:
-- `level_recommendation_mapping_rules`
-- `word_level_norm` (word_id별 CEFR 정규화 결과)
-
-### 10-2) 추천 세트 생성 방식
 신규 스크립트:
-- `etl/build_level_recommendations.py`
+- `etl/upgrade_level_recommendations.py`
 
-로직:
-1. sense+example가 연결된 단어만 후보로 수집
-2. `freq` 내림차순 랭크 후 CEFR 레벨 매핑
-3. 레벨별 상위 N개 선별(`--per-level`, 기본 200)
-4. 각 단어 대표 meaning 1~2개 선정
-   - 기준: sense별 연결 예문 수 DESC, 정의 길이 ASC
-5. meaning당 예문 1~3개 선정
-   - 기준: 문장 길이 중앙값(약 70 chars) 근접 순
+개선 로직:
+1. meaning 정규화
+   - 공백 정리, 말미 구두점 제거
+   - `to + 동사` 형태의 불필요 접두 제거
+   - `meaning_1 == meaning_2` 중복 시 `meaning_2` 제거
+2. examples_json 품질 개선
+   - 예문 공백/구두점 정리 (`..` → `.` 등)
+   - 길이 기준 필터(8~180자)
+   - 영문 포함 여부 검증
+   - 대소문자 normalize 및 문장부호 보정
+   - 동일 예문(case-insensitive) 중복 제거
+3. 한국어 의미(ko) 보강 가능한 범위 반영
+   - `meaning_translations_ko` 캐시 존재 시 `meaning_1_ko`, `meaning_2_ko` 자동 보강
 
-### 10-3) 앱 사용 가능한 산출물
-1) sqlite materialized table
-- `level_recommendations`
-  - `level, rank_in_level, lemma, pos, freq, meaning_1, meaning_2, examples_json`
-2) sqlite view
-- `v_level_recommendations`
-3) JSON export
-- `data/processed/level_recommendations.json`
-
-### 10-4) 레벨별 추천 수량 검증
-검증 SQL:
-```sql
-SELECT level, COUNT(*) AS cnt
-FROM level_recommendations
-GROUP BY level
-ORDER BY level;
-```
-결과:
-- A1: 200
-- A2: 200
-- B1: 200
-- B2: 200
-- C1: 200
-- C2: 200
-
-정규화 대상(후보) 분포:
-```sql
-SELECT cefr_level, COUNT(*) FROM word_level_norm GROUP BY cefr_level ORDER BY cefr_level;
-```
-결과:
-- A1: 355
-- A2: 708
-- B1: 1416
-- B2: 1771
-- C1: 1416
-- C2: 1417
-
-### 10-5) 연동 포인트(데모)
-CLI 데모 스크립트:
-- `etl/level_recommendation_demo.py`
+### 10-2. 안전 절차 수행 기록 (백업 → 변환(dry-run) → 검증 → 반영)
+실행 순서:
 ```bash
-python3 etl/level_recommendation_demo.py --db data/processed/dictionary.db --level A1 --limit 5
+# 1) dry-run + 자동 백업
+python3 etl/upgrade_level_recommendations.py --db data/processed/dictionary.db
+
+# 2) apply + 자동 백업
+python3 etl/upgrade_level_recommendations.py --db data/processed/dictionary.db --apply
+
+# 3) idempotency 검증(dry-run 0건 확인)
+python3 etl/upgrade_level_recommendations.py --db data/processed/dictionary.db --no-backup
 ```
 
-브라우저 데모 화면:
-- `level-demo.html` + `level-demo.js`
-- 레벨 선택 시 `data/processed/level_recommendations.json`에서 추천 단어+뜻+예문 표시
+결과 요약:
+- 백업 생성:
+  - `data/processed/backups/dictionary.backup.20260221_115745.db`
+  - `data/processed/backups/dictionary.backup.20260221_115747.db`
+- 변환 스캔: 1,200행
+- 반영 변경: 892행(+ 후속 정규화 6행)
+- 최종 idempotency: dry-run 변경 0행
+- 레벨별 건수 유지: A1~C2 각 200행
+- 빈 examples_json: 0행
 
-### 10-6) 무결성/배치 운영
-- 기존 `words/senses/examples/sense_examples` 원본 데이터는 변경하지 않음
-- 결과는 별도 테이블/뷰/JSON으로 생성하여 무결성 유지
-- `etl/build_level_recommendations.py`를 배치 반복 실행 가능(재생성 방식)
+### 10-3. 업데이트 시각 표시 구현 위치
+요구 형식: `업데이트: YYYY-MM-DD HH:mm:ss`
 
-### 10-7) 실행 상태(현재 세션)
-- 코드/문서 기준으로 **v2 파이프라인 재설계 완료**
-- 현재 환경에 `DEEPL_API_KEY`가 없어 DeepL 실주입은 미실행
-- DeepL 미사용 시 fallback(`googletrans`)은 비공식 소스이므로 운영 기본값에서 제외
+구현 파일:
+- `index.html`
+  - `<body>` 최상단에 `#update-timestamp` 추가
+- `styles.css`
+  - `#update-timestamp`를 `position: fixed; top: 0; ...`로 항상 보이게 적용
+  - 매우 작은 글씨(`font-size: 10px`)
+- `app.js`
+  - `const SITE_UPDATED_AT = "2026-02-21 11:57:51";`
+  - `renderUpdateTimestamp()`에서 `업데이트: ...` 렌더
 
-현재 DB 반영 현황:
-```sql
-SELECT level,
-       SUM(CASE WHEN meaning_1_ko IS NOT NULL AND TRIM(meaning_1_ko)<>'' THEN 1 ELSE 0 END) AS m1_ko,
-       SUM(CASE WHEN meaning_2_ko IS NOT NULL AND TRIM(meaning_2_ko)<>'' THEN 1 ELSE 0 END) AS m2_ko,
-       COUNT(*) AS total
-FROM level_recommendations
-GROUP BY level
-ORDER BY level;
+표시 예시:
+- `업데이트: 2026-02-21 11:57:51`
+
+### 10-4. 검증 결과 (기존 기능 영향)
+실행:
+```bash
+node --check app.js
+python3 etl/upgrade_level_recommendations.py --db data/processed/dictionary.db --no-backup
 ```
+
+결과:
+- JS 문법 검사 통과
+- 품질 업그레이드 스크립트 dry-run 결과 변경 0행(재실행 안전)
+- 레코드 수/레벨 분포 유지로 기존 추천 구조 훼손 없음
+
+### 10-5. 샘플 개선 결과(전/후 요약)
+샘플 파일: `logs/quality_upgrade_samples.json`
+
+예시 1) `portuguese`
+- 전: `Portuguese words sound squished..`
+- 후: `Portuguese words sound squished.`
+
+예시 2) `eternity`
+- 전: `Eternity exists. It exists here..`
+- 후: `Eternity exists. It exists here.`
+
+### 10-6. 배포 결과
+- GitHub 저장소: `https://github.com/rooftop-space/english-education-site`
+- GitHub Pages URL(설정 관례 기준): `https://rooftop-space.github.io/english-education-site/`
+- Pages 반영 확인: 커밋 푸시 후 URL 접속으로 확인(최대 수 분 지연 가능)

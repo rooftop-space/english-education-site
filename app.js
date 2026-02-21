@@ -1,4 +1,5 @@
 const STORAGE_KEY = "english-loop-state-v2";
+const SITE_UPDATED_AT = "2026-02-21 11:57:51";
 
 const defaultLessons = [
   { id: "l1", title: "Airport Basics", tag: "travel", cards: ["Where is gate 12?", "Can I have a window seat?"] },
@@ -351,7 +352,14 @@ function bindEvents() {
   document.getElementById("logout-btn").addEventListener("click", logout);
 }
 
+function renderUpdateTimestamp() {
+  const el = document.getElementById("update-timestamp");
+  if (!el) return;
+  el.textContent = `업데이트: ${SITE_UPDATED_AT}`;
+}
+
 function init() {
+  renderUpdateTimestamp();
   ensureSeedAdmin();
   renderDiag();
   bindEvents();
