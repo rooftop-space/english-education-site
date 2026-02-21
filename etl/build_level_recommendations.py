@@ -145,6 +145,7 @@ def ensure_tables(conn: sqlite3.Connection) -> None:
           meaning_2_ko TEXT,
           ko_translation_source TEXT,
           ko_translation_is_machine INTEGER,
+          ko_translation_quality TEXT,
           examples_json TEXT NOT NULL,
           mapping_version TEXT NOT NULL,
           created_at TEXT DEFAULT CURRENT_TIMESTAMP,
@@ -159,7 +160,7 @@ def ensure_tables(conn: sqlite3.Connection) -> None:
 
         CREATE VIEW IF NOT EXISTS v_level_recommendations AS
         SELECT level, rank_in_level, lemma, pos, freq, meaning_1, meaning_2, meaning_1_ko, meaning_2_ko,
-               ko_translation_source, ko_translation_is_machine, examples_json
+               ko_translation_source, ko_translation_is_machine, ko_translation_quality, examples_json
         FROM level_recommendations
         ORDER BY level, rank_in_level;
         """
@@ -170,6 +171,7 @@ def ensure_tables(conn: sqlite3.Connection) -> None:
         ("meaning_2_ko", "TEXT"),
         ("ko_translation_source", "TEXT"),
         ("ko_translation_is_machine", "INTEGER"),
+        ("ko_translation_quality", "TEXT"),
     ]:
         try:
             conn.execute(f"ALTER TABLE level_recommendations ADD COLUMN {column_name} {column_type}")
@@ -250,9 +252,9 @@ def write_outputs(
                 INSERT INTO level_recommendations(
                   level, rank_in_level, word_id, lemma, pos, freq,
                   meaning_1, meaning_2, meaning_1_ko, meaning_2_ko,
-                  ko_translation_source, ko_translation_is_machine,
+                  ko_translation_source, ko_translation_is_machine, ko_translation_quality,
                   examples_json, mapping_version
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     level,
@@ -263,6 +265,7 @@ def write_outputs(
                     row["freq"],
                     row["meaning_1"],
                     row["meaning_2"],
+                    None,
                     None,
                     None,
                     None,

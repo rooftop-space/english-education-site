@@ -324,6 +324,99 @@ python3 etl/level_recommendation_demo.py --db data/processed/dictionary.db --lev
 - `say` → `utter aloud` = `큰 소리로 말하다`
 - `not` → `negation of a word or group of words` = `단어/어구의 부정`
 
+---
+
+## 11) 번역 파이프라인 재설계 (신뢰 소스 우선, 2026-02-21)
+
+### 11-1. 사용한 번역 소스/API/DB와 근거
+이번 재설계는 "출처 신뢰성 + 운영 가능성"을 기준으로 아래 우선순위를 적용함.
+
+1) **Curated Glossary (로컬 CSV, 수동 품질 보정)**
+- 파일: `data/processed/meaning_glossary_ko.csv`
+- 근거: 내부 자산(프로젝트 소유)으로 라이선스/재사용 범위를 명확히 통제 가능
+- 용도: 교육용 톤, 핵심 표현(고빈도 의미)의 품질 앵커
+
+2) **DeepL API (공식 상용/프리 API)**
+- 스크립트: `etl/translate_meanings_ko.py` (`--provider deepl`)
+- 근거: 공식 API/약관 명확, 대량 번역 운영 경험이 많은 상용 서비스
+- 용도: glossary 미커버 영역의 대량 자동 번역
+
+3) **(옵션) Google GTX 비공식 fallback**
+- 기본 비활성화, `--allow-unofficial-fallback`에서만 사용
+- 근거: 공식 계약형 API가 아니라 운영 리스크가 있어 기본 경로에서 제외
+
+### 11-2. 비용/쿼터/운영 리스크
+- **Curated glossary**
+  - 비용: 0 (내부 관리 비용만 존재)
+  - 리스크: 커버리지 제한(처음엔 일부 의미만 커버)
+- **DeepL API**
+  - 비용: 사용량 기반 과금(요금은 계정/플랜 정책에 따름)
+  - 쿼터: 플랜별 월간 문자량 제한 존재
+  - 운영 리스크: API key 관리 필요, 일시적 네트워크/API 장애 가능
+- **GTX fallback (비공식)**
+  - 비용: 직접 과금은 없을 수 있으나
+  - 리스크: 약관/안정성/차단 가능성으로 운영 불확실성 큼
+  - 결론: 운영 표준 경로로는 비권장
+
+### 11-3. 재생성 절차 (처음부터 다시 만들기)
+```bash
+cd /Users/rooftop/.openclaw/workspace/english-education-site
+
+# 0) (선택) DB 초기화
+rm -f data/processed/dictionary.db
+sqlite3 data/processed/dictionary.db < sql/schema.sql
+
+# 1) 추천 데이터 재생성
+python3 etl/build_level_recommendations.py \
+  --db data/processed/dictionary.db \
+  --json-out data/processed/level_recommendations.json \
+  --per-level 200
+
+# 2) 한국어 번역 파이프라인 (공식 API 우선)
+# DEEPL_API_KEY 필요
+python3 etl/translate_meanings_ko.py \
+  --db data/processed/dictionary.db \
+  --json-out data/processed/level_recommendations.json \
+  --levels A1,A2,B1,B2,C1,C2 \
+  --provider deepl \
+  --glossary-csv data/processed/meaning_glossary_ko.csv
+```
+
+A1~A2만 우선 재생성:
+```bash
+python3 etl/translate_meanings_ko.py \
+  --db data/processed/dictionary.db \
+  --json-out data/processed/level_recommendations.json \
+  --levels A1,A2 \
+  --provider deepl \
+  --glossary-csv data/processed/meaning_glossary_ko.csv
+```
+
+### 11-4. 샘플 품질 비교 (기존 vs 개선)
+개선 포인트: glossary 우선 적용으로 교육용 자연스러움 보정.
+
+- `undergo`
+  - 기존: `받다`
+  - 개선: `겪다`
+- `utter aloud`
+  - 기존: `큰 소리로`
+  - 개선: `소리 내어 말하다`
+- `form or compose`
+  - 기존: `형태를 취하거나 구성하다`
+  - 개선: `형성하거나 구성하다`
+- `be priced at`
+  - 기존: `가격이 책정되다`
+  - 개선: `가격이 ~이다`
+- `negation of a word or group of words`
+  - 기존: `단어 또는 단어 그룹의 부정`
+  - 개선: `단어 또는 어구를 부정함`
+
+### 11-5. 품질 메타 필드
+`level_recommendations` + JSON에 아래 메타를 유지함.
+- `ko_translation_source`
+- `ko_translation_is_machine`
+- `ko_translation_quality` (`human_curated`, `machine_official`, `machine_unofficial`)
+
 
 ---
 
